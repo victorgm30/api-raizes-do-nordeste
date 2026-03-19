@@ -22,14 +22,29 @@ public class CategoryController {
     public List<Category> getAllCategories() {
         return categoryRepository.findAll();
     }
+    //Buscar uma categoria por ID
     @GetMapping("/{id}")
     public Category getCategoryById(@PathVariable Long id) {
-        return categoryRepository.findById(id).orElse(null);
+        return categoryRepository.findById(id)
+                 .orElseThrow(() -> new RuntimeException("Category not found"));
     }
 
     //Inserir uma nova categoria
     @PostMapping
     public Category createCategory(@RequestBody Category category) {
+        return categoryRepository.save(category);
+    }
+
+    //Atualizar uma categoria existente
+    @PutMapping("/{id}")
+    public Category updateCategory(@PathVariable Long id, @RequestBody Category categoryDetails) {
+
+        Category category = categoryRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Category not found"));
+
+        category.setName(categoryDetails.getName());
+        category.setDescription(categoryDetails.getDescription());
+
         return categoryRepository.save(category);
     }
 

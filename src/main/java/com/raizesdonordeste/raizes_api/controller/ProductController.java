@@ -19,14 +19,32 @@ public class ProductController {
     public List<Product> getAllProducts() {
         return productRepository.findAll();
     }
+    //Buscar um produto por ID
     @GetMapping("/{id}")
     public Product getProductById(@PathVariable Long id) {
-        return productRepository.findById(id).orElse(null);
+        return productRepository.findById(id)
+                 .orElseThrow(() -> new RuntimeException("Product not found"));
     }
 
     //Inserir um novo produto
     @PostMapping
     public Product createProduct(@RequestBody Product product) {
+        return productRepository.save(product);
+    }
+
+    //Atualizar um produto existente
+    @PutMapping("/{id}")
+    public Product updateProduct(@PathVariable Long id, @RequestBody Product productDetails) {
+
+        Product product = productRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Product not found"));
+
+        product.setName(productDetails.getName());
+        product.setDescription(productDetails.getDescription());
+        product.setPrice(productDetails.getPrice());
+        product.setActive(productDetails.getActive());
+        product.setCategory(productDetails.getCategory());
+
         return productRepository.save(product);
     }
 
