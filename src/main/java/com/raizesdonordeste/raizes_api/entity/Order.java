@@ -29,4 +29,8 @@ public class Order {
     @JoinColumn(name = "order_id")
     private List<OrderItem> items;
 
+    @ManyToOne
+    @JoinColumn(name = "customer_id")   
+    private Customer customer;
+
 }
