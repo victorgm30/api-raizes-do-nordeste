@@ -31,7 +31,7 @@ public class OrderService {
         .orElseThrow(() -> new RuntimeException("Order not found"));
     }
     // Buscar um pedido por Status
-    public Order getOrderByStatus(OrderStatus status) {
+    public List<Order> getOrderByStatus(OrderStatus status) {
         return orderRepository.findByStatus(status);
     }
 

@@ -7,7 +7,7 @@ import jakarta.persistence.*;
 import lombok.*;
 
 @Entity
-@Table(name = "product")
+@Table(name = "products")
 @Getter
 @Setter
 @NoArgsConstructor
@@ -31,4 +31,8 @@ public class Product {
     @JoinColumn(name = "category_id")
     @JsonIgnoreProperties("products") // Evita o loop infinito na serialização JSON
     private Category category;
+
+    @ManyToOne
+    @JoinColumn(name = "unit_id")   
+    private Unit unit;
 }

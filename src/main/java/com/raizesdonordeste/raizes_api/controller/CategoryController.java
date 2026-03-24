@@ -53,7 +53,7 @@ public class CategoryController {
     public void deleteCategory(@PathVariable Long id) {
 
         if (productRepository.existsByCategoryId(id)) {
-            throw new RuntimeException("Não é possível deletar a categoria, existem produtos associados a ela.");
+            throw new RuntimeException("Not possible to delete category with associated products");
         }
         categoryRepository.deleteById(id);
     }

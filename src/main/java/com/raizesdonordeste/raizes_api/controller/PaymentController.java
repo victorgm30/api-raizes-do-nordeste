@@ -24,7 +24,7 @@ public class PaymentController {
     @GetMapping("/{id}")
     public Payment getPaymentById(@PathVariable Long id) {
         return paymentRepository.findById(id)
-        .orElseThrow(() -> new RuntimeException("Pagamento não encontrado com ID: " + id));
+        .orElseThrow(() -> new RuntimeException("Payment not found with ID: " + id));
     }
 
     // Criar um novo pagamento
@@ -37,7 +37,7 @@ public class PaymentController {
     @PatchMapping("/{id}/status")
     public Payment updatePaymentStatus(@PathVariable Long id, @RequestParam String status) {
         Payment payment = getPaymentById(id)
-        .orElseThrow(() -> new RuntimeException("Pagamento não encontrado com ID: " + id));
+        .orElseThrow(() -> new RuntimeException("Payment not found with ID: " + id));
         
         payment.setStatus(status);
         

@@ -1,6 +1,6 @@
 package com.raizesdonordeste.raizes_api.controller;
 
-import com.raizesdonordeste.raizes_api.repository.Customer;
+import com.raizesdonordeste.raizes_api.entity.Customer;
 import com.raizesdonordeste.raizes_api.repository.CustomerRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -41,8 +41,8 @@ public class CustomerController {
     // Atualizar um cliente existente
     @PutMapping("/{id}")
     public Customer updateCustomer(@PathVariable Long id, @RequestBody Customer customerDetails) {
-        Customer customer = customer Repository.findById(id)
-        orElseThrow(() -> new RuntimeException("Customer not found"));
+        Customer customer = customerRepository.findById(id)
+        .orElseThrow(() -> new RuntimeException("Customer not found"));
 
         customer.setName(customerDetails.getName());
         customer.setEmail(customerDetails.getEmail());
