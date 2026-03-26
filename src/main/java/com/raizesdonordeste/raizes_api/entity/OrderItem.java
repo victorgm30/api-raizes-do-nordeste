@@ -2,6 +2,7 @@ package com.raizesdonordeste.raizes_api.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
 @Table(name = "order_item")

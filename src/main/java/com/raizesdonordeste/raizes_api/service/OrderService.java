@@ -1,10 +1,9 @@
 package com.raizesdonordeste.raizes_api.service;
 
-import com.raizesdonordeste.raizes_api.dto.CreateOrderDTO;
-import com.raizesdonordeste.raizes_api.dto.OrderItemDTO;
-import com.raizesdonordeste.raizes_api.dto.OrderResponseDTO;
+import com.raizesdonordeste.raizes_api.dto.*;
 import com.raizesdonordeste.raizes_api.entity.*;
 import com.raizesdonordeste.raizes_api.repository.*;
+import com.raizesdonordeste.raizes_api.exception.ResourceNotFoundException;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -28,7 +27,7 @@ public class OrderService {
     // Buscar um pedido por ID
     public Order getOrderById(Long id) {
         return orderRepository.findById(id)
-        .orElseThrow(() -> new RuntimeException("Order not found"));
+        .orElseThrow(() -> new ResourceNotFoundException("Order not found"));
     }
     // Buscar um pedido por Status
     public List<Order> getOrderByStatus(OrderStatus status) {
@@ -45,7 +44,7 @@ public class OrderService {
 
         for (OrderItemDTO itemDTO : dto.getItems()) {
             Product product = productRepository.findById(itemDTO.getProductId())
-                    .orElseThrow(() -> new RuntimeException("Product not found"));
+                    .orElseThrow(() -> new ResourceNotFoundException("Product not found"));
 
             double subtotal = product.getPrice() * itemDTO.getQuantity();
             total += subtotal;
@@ -66,7 +65,7 @@ public class OrderService {
     public Order updateOrderStatus(Long id, OrderStatus status) {
         
         Order order = orderRepository.findById(id)
-                 .orElseThrow(() -> new RuntimeException("Order not found"));
+                 .orElseThrow(() -> new ResourceNotFoundException("Order not found"));
 
         order.setStatus(status);
         return orderRepository.save(order);

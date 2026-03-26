@@ -3,6 +3,7 @@ package com.raizesdonordeste.raizes_api.controller;
 import com.raizesdonordeste.raizes_api.entity.Unit;
 import com.raizesdonordeste.raizes_api.repository.UnitRepository;
 import com.raizesdonordeste.raizes_api.repository.ProductRepository;
+import com.raizesdonordeste.raizes_api.exception.ResourceNotFoundException;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -15,6 +16,8 @@ public class UnitController {
 
     @Autowired
     private UnitRepository unitRepository;
+    @Autowired
+    private ProductRepository productRepository;
 
     // Listar todas as unidades
     @GetMapping
@@ -25,7 +28,7 @@ public class UnitController {
     @GetMapping("/{id}")
     public Unit getUnitById(@PathVariable Long id) {
         return unitRepository.findById(id)
-        .orElseThrow(() -> new RuntimeException("Unit not found"));
+        .orElseThrow(() -> new ResourceNotFoundException("Unit not found"));
     }
 
     // Criar uma nova unidade
@@ -39,7 +42,7 @@ public class UnitController {
     public Unit updateUnit(@PathVariable Long id, @RequestBody Unit unitDetails) {
         
         Unit unit = unitRepository.findById(id)
-        .orElseThrow(() -> new RuntimeException("Unit not found"));
+        .orElseThrow(() -> new ResourceNotFoundException("Unit not found"));
         
         unit.setName(unitDetails.getName());
         unit.setAddress(unitDetails.getAddress());
@@ -51,8 +54,8 @@ public class UnitController {
     @DeleteMapping("/{id}")
     public void deleteUnit(@PathVariable Long id) {
 
-        if (productRepository.existsByUnitid(id)) {
-            throw new RuntimeException("Unit has products associated and cannot be deleted");
+        if (productRepository.existsByUnitId(id)) {
+            throw new IllegalStateException("Unit has products associated and cannot be deleted");
         }
 
         unitRepository.deleteById(id);

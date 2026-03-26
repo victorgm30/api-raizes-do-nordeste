@@ -2,6 +2,8 @@ package com.raizesdonordeste.raizes_api.controller;
 
 import com.raizesdonordeste.raizes_api.entity.Product;
 import com.raizesdonordeste.raizes_api.repository.ProductRepository;
+import com.raizesdonordeste.raizes_api.exception.ResourceNotFoundException;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -23,7 +25,7 @@ public class ProductController {
     @GetMapping("/{id}")
     public Product getProductById(@PathVariable Long id) {
         return productRepository.findById(id)
-                 .orElseThrow(() -> new RuntimeException("Product not found"));
+                 .orElseThrow(() -> new ResourceNotFoundException("Product not found"));
     }
 
     //Inserir um novo produto
@@ -37,7 +39,7 @@ public class ProductController {
     public Product updateProduct(@PathVariable Long id, @RequestBody Product productDetails) {
 
         Product product = productRepository.findById(id)
-                .orElseThrow(() -> new RuntimeException("Product not found"));
+                .orElseThrow(() -> new ResourceNotFoundException("Product not found"));
 
         product.setName(productDetails.getName());
         product.setDescription(productDetails.getDescription());

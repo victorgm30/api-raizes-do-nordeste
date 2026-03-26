@@ -8,4 +8,6 @@ public interface ProductRepository extends JpaRepository<Product, Long> {
 
     boolean existsByCategoryId(Long categoryId);
 
+    boolean existsByUnitId(Long unitId);
+    
 }

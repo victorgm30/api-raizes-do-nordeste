@@ -3,6 +3,8 @@ package com.raizesdonordeste.raizes_api.controller;
 import com.raizesdonordeste.raizes_api.entity.Category;
 import com.raizesdonordeste.raizes_api.repository.ProductRepository;
 import com.raizesdonordeste.raizes_api.repository.CategoryRepository;
+import com.raizesdonordeste.raizes_api.exception.ResourceNotFoundException;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -26,7 +28,7 @@ public class CategoryController {
     @GetMapping("/{id}")
     public Category getCategoryById(@PathVariable Long id) {
         return categoryRepository.findById(id)
-                 .orElseThrow(() -> new RuntimeException("Category not found"));
+                 .orElseThrow(() -> new ResourceNotFoundException("Category not found"));
     }
 
     //Inserir uma nova categoria
@@ -40,7 +42,7 @@ public class CategoryController {
     public Category updateCategory(@PathVariable Long id, @RequestBody Category categoryDetails) {
 
         Category category = categoryRepository.findById(id)
-                .orElseThrow(() -> new RuntimeException("Category not found"));
+                .orElseThrow(() -> new ResourceNotFoundException("Category not found"));
 
         category.setName(categoryDetails.getName());
         category.setDescription(categoryDetails.getDescription());
@@ -53,7 +55,7 @@ public class CategoryController {
     public void deleteCategory(@PathVariable Long id) {
 
         if (productRepository.existsByCategoryId(id)) {
-            throw new RuntimeException("Not possible to delete category with associated products");
+            throw new ResourceNotFoundException("Not possible to delete category with associated products");
         }
         categoryRepository.deleteById(id);
     }

@@ -3,6 +3,7 @@ package com.raizesdonordeste.raizes_api.controller;
 import com.raizesdonordeste.raizes_api.entity.Stock;
 import com.raizesdonordeste.raizes_api.repository.StockRepository;
 import com.raizesdonordeste.raizes_api.repository.ProductRepository;
+import com.raizesdonordeste.raizes_api.exception.ResourceNotFoundException;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -25,7 +26,7 @@ public class StockController {
     @GetMapping("/{id}")
     public Stock getStockById(@PathVariable Long id) {
         return stockRepository.findById(id)
-        .orElseThrow(() -> new RuntimeException("Stock not found with id: " + id));
+        .orElseThrow(() -> new ResourceNotFoundException("Stock not found with id: " + id));
     }
 
     // Criar um novo estoque
@@ -38,7 +39,7 @@ public class StockController {
     @PutMapping("/{id}")
     public Stock updateStock(@PathVariable Long id, @RequestBody Stock stockDetails) {
         Stock stock = stockRepository.findById(id)
-        .orElseThrow(() -> new RuntimeException("Stock not found with id: " + id));
+        .orElseThrow(() -> new ResourceNotFoundException("Stock not found with id: " + id));
 
         stock.setQuantity(stockDetails.getQuantity());
         stock.setProduct(stockDetails.getProduct());
@@ -51,10 +52,10 @@ public class StockController {
     public void deleteStock(@PathVariable Long id) {
         
        Stock stock = stockRepository.findById(id)
-        .orElseThrow(() -> new RuntimeException("Stock not found with id: " + id));
+        .orElseThrow(() -> new ResourceNotFoundException("Stock not found with id: " + id));
 
         if (stock.getQuantity() > 0) {
-            throw new RuntimeException("Stock has products associated and cannot be deleted");
+            throw new ResourceNotFoundException("Stock has products associated and cannot be deleted");
         }
 
         stockRepository.deleteById(id);

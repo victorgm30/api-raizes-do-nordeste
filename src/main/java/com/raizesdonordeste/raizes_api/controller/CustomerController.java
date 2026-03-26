@@ -2,6 +2,7 @@ package com.raizesdonordeste.raizes_api.controller;
 
 import com.raizesdonordeste.raizes_api.entity.Customer;
 import com.raizesdonordeste.raizes_api.repository.CustomerRepository;
+import com.raizesdonordeste.raizes_api.exception.ResourceNotFoundException;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -24,7 +25,7 @@ public class CustomerController {
     @GetMapping("/{id}")    
     public Customer getCustomerById(@PathVariable Long id) {
         return customerRepository.findById(id)
-        .orElseThrow(() -> new RuntimeException("Customer not found"));
+        .orElseThrow(() -> new ResourceNotFoundException("Customer not found"));
     }
     // Buscar clientes por nome
     @GetMapping("/search")
@@ -42,7 +43,7 @@ public class CustomerController {
     @PutMapping("/{id}")
     public Customer updateCustomer(@PathVariable Long id, @RequestBody Customer customerDetails) {
         Customer customer = customerRepository.findById(id)
-        .orElseThrow(() -> new RuntimeException("Customer not found"));
+        .orElseThrow(() -> new ResourceNotFoundException("Customer not found"));
 
         customer.setName(customerDetails.getName());
         customer.setEmail(customerDetails.getEmail());
@@ -56,7 +57,7 @@ public class CustomerController {
     @DeleteMapping("/{id}")
     public void deleteCustomer(@PathVariable Long id) {
         Customer customer = customerRepository.findById(id)
-        .orElseThrow(() -> new RuntimeException("Customer not found"));
+        .orElseThrow(() -> new ResourceNotFoundException("Customer not found"));
         customerRepository.delete(customer);
     }
 }

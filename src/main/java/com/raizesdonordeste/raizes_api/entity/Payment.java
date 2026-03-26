@@ -2,6 +2,7 @@ package com.raizesdonordeste.raizes_api.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
+import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "payment")
@@ -20,7 +21,7 @@ public class Payment {
     @Enumerated(EnumType.STRING)
     private PaymentMethod method;
 
-    @EnumType(EnumType.STRING)
+    @Enumerated(EnumType.STRING)
     private PaymentStatus status;
 
     private LocalDateTime paymentDate;

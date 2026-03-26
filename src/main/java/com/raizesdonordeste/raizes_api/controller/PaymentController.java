@@ -2,6 +2,8 @@ package com.raizesdonordeste.raizes_api.controller;
 
 import com.raizesdonordeste.raizes_api.entity.Payment;
 import com.raizesdonordeste.raizes_api.repository.PaymentRepository;
+import com.raizesdonordeste.raizes_api.exception.ResourceNotFoundException;
+import com.raizesdonordeste.raizes_api.entity.PaymentStatus;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -24,7 +26,7 @@ public class PaymentController {
     @GetMapping("/{id}")
     public Payment getPaymentById(@PathVariable Long id) {
         return paymentRepository.findById(id)
-        .orElseThrow(() -> new RuntimeException("Payment not found with ID: " + id));
+        .orElseThrow(() -> new ResourceNotFoundException("Payment not found with ID: " + id));
     }
 
     // Criar um novo pagamento
@@ -36,10 +38,10 @@ public class PaymentController {
     // Atualizar o status de um pagamento existente
     @PatchMapping("/{id}/status")
     public Payment updatePaymentStatus(@PathVariable Long id, @RequestParam String status) {
-        Payment payment = getPaymentById(id)
-        .orElseThrow(() -> new RuntimeException("Payment not found with ID: " + id));
         
-        payment.setStatus(status);
+        Payment payment = getPaymentById(id);
+                
+        payment.setStatus(PaymentStatus.valueOf(status.toUpperCase()));
         
         return paymentRepository.save(payment);
     }
