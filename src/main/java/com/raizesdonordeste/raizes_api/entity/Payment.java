@@ -4,6 +4,9 @@ import jakarta.persistence.*;
 import lombok.*;
 import java.time.LocalDateTime;
 
+import com.raizesdonordeste.raizes_api.enums.PaymentMethod;
+import com.raizesdonordeste.raizes_api.enums.PaymentStatus;
+
 @Entity
 @Table(name = "payment")
 @Getter

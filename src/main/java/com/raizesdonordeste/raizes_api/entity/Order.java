@@ -6,6 +6,9 @@ import lombok.*;
 import java.time.LocalDateTime;
 import java.util.List;
 
+import com.raizesdonordeste.raizes_api.enums.OrderChannel;
+import com.raizesdonordeste.raizes_api.enums.OrderStatus;
+
 @Entity
 @Table(name = "orders")
 @Getter
@@ -25,8 +28,11 @@ public class Order {
     @Enumerated(EnumType.STRING)
     private OrderStatus status;
 
+    @Enumerated(EnumType.STRING)
+    @Column(nullable = false)
+    private OrderChannel channel;
+
     @OneToMany(mappedBy = "order", cascade = CascadeType.ALL)
-    @JoinColumn(name = "order_id")
     private List<OrderItem> items;
 
     @ManyToOne

@@ -1,4 +1,4 @@
-package com.raizesdonordeste.raizes_api.entity;
+package com.raizesdonordeste.raizes_api.enums;
 
 public enum PaymentStatus {
 

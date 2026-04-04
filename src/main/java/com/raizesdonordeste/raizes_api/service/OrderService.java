@@ -2,6 +2,7 @@ package com.raizesdonordeste.raizes_api.service;
 
 import com.raizesdonordeste.raizes_api.dto.*;
 import com.raizesdonordeste.raizes_api.entity.*;
+import com.raizesdonordeste.raizes_api.enums.OrderStatus;
 import com.raizesdonordeste.raizes_api.repository.*;
 import com.raizesdonordeste.raizes_api.exception.ResourceNotFoundException;
 
@@ -10,6 +11,7 @@ import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
 import java.util.List;
+import java.util.ArrayList;
 
 @Service
 public class OrderService {
@@ -39,18 +41,35 @@ public class OrderService {
         Order order = new Order();
         order.setOrderDate(LocalDateTime.now());
         order.setStatus(OrderStatus.RECEIVED);
+        order.setChannel(dto.getChannel());
 
         double total = 0;
 
+        List<OrderItem> items = new ArrayList<>();
+
         for (OrderItemDTO itemDTO : dto.getItems()) {
+
             Product product = productRepository.findById(itemDTO.getProductId())
                     .orElseThrow(() -> new ResourceNotFoundException("Product not found"));
 
-            double subtotal = product.getPrice() * itemDTO.getQuantity();
+            double price = product.getPrice();
+            int quantity = itemDTO.getQuantity();
+
+            double subtotal = price * quantity;
             total += subtotal;
+
+            OrderItem item = new OrderItem();
+            item.setProduct(product);
+            item.setQuantity(quantity);
+            item.setPrice(price);
+            item.setOrder(order);
+
+            items.add(item);
         }
 
+        order.setItems(items);
         order.setTotal(total);
+
         Order savedOrder = orderRepository.save(order);
 
         OrderResponseDTO response = new OrderResponseDTO();

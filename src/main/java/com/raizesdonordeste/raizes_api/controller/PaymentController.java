@@ -1,9 +1,12 @@
 package com.raizesdonordeste.raizes_api.controller;
 
-import com.raizesdonordeste.raizes_api.entity.Payment;
+import com.raizesdonordeste.raizes_api.entity.*;
+import com.raizesdonordeste.raizes_api.enums.OrderStatus;
+import com.raizesdonordeste.raizes_api.enums.PaymentStatus;
 import com.raizesdonordeste.raizes_api.repository.PaymentRepository;
+import com.raizesdonordeste.raizes_api.repository.OrderRepository;
+import com.raizesdonordeste.raizes_api.service.PaymentService;
 import com.raizesdonordeste.raizes_api.exception.ResourceNotFoundException;
-import com.raizesdonordeste.raizes_api.entity.PaymentStatus;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -16,6 +19,12 @@ public class PaymentController {
 
     @Autowired
     private PaymentRepository paymentRepository;
+
+    @Autowired
+    private OrderRepository orderRepository;
+
+    @Autowired
+    private PaymentService paymentService;
     
     // Listar todos os pagamentos
     @GetMapping
@@ -29,7 +38,7 @@ public class PaymentController {
         .orElseThrow(() -> new ResourceNotFoundException("Payment not found with ID: " + id));
     }
 
-    // Criar um novo pagamento
+    // Criar um novo pagamento manualmente
     @PostMapping
     public Payment createPayment(@RequestBody Payment payment) {
         return paymentRepository.save(payment);
@@ -45,4 +54,28 @@ public class PaymentController {
         
         return paymentRepository.save(payment);
     }
+
+    // Endpoint utilizado para simular integração com gateway de pagamento
+    // Processar um pagamento (MOCK) para um pedido
+    @PostMapping("/process/{orderId}")
+    public Payment processPayment(@PathVariable Long orderId) {
+        Order order = orderRepository.findById(orderId)
+        .orElseThrow(() -> new ResourceNotFoundException("Order not found with ID: " + orderId));
+        
+        boolean approved = paymentService.processPayment(order.getTotal());
+        
+        Payment payment = new Payment();
+        payment.setOrder(order);
+
+        if(approved) {
+            payment.setStatus(PaymentStatus.APPROVED);
+            order.setStatus(OrderStatus.PAID);
+        } else {
+            payment.setStatus(PaymentStatus.REFUSED);
+        }
+        
+        orderRepository.save(order);
+
+        return paymentRepository.save(payment);
+    }    
 }

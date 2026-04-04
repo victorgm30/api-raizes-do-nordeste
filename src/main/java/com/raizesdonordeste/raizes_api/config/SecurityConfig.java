@@ -1,19 +1,30 @@
 package com.raizesdonordeste.raizes_api.config;
 
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
+import com.raizesdonordeste.raizes_api.security.JwtFilter;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.*;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
-import org.springframework.security.web.SecurityFilterChain;
+import org.springframework.security.web.*;
+import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
 @Configuration
 public class SecurityConfig {
 
+    @Autowired
+    private JwtFilter jwtFilter;
+
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         http
-            .csrf(csrf -> csrf.disable()) // Desabilita CSRF para facilitar o desenvolvimento
+        .csrf(csrf -> csrf.disable())
             .authorizeHttpRequests(auth -> auth
-                .anyRequest().permitAll()); // Permite todas as requisições sem autenticação
+            .requestMatchers("/auth/**").permitAll() // Permitir acesso sem autenticação para endpoints de autenticação
+            .anyRequest().authenticated() // Exigir autenticação para todas as outras requisições
+            )
+
+            // Adicionar o filtro JWT antes do filtro de autenticação do Spring Security
+            .addFilterBefore(jwtFilter, UsernamePasswordAuthenticationFilter.class); 
 
         return http.build();
     }

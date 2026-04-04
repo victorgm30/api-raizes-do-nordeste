@@ -3,7 +3,7 @@ package com.raizesdonordeste.raizes_api.controller;
 import com.raizesdonordeste.raizes_api.dto.CreateOrderDTO;
 import com.raizesdonordeste.raizes_api.dto.OrderResponseDTO;
 import com.raizesdonordeste.raizes_api.entity.Order;
-import com.raizesdonordeste.raizes_api.entity.OrderStatus;
+import com.raizesdonordeste.raizes_api.enums.OrderStatus;
 import com.raizesdonordeste.raizes_api.service.OrderService;
 
 import org.springframework.beans.factory.annotation.Autowired;
