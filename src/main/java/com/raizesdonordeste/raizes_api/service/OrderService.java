@@ -12,6 +12,7 @@ import org.springframework.stereotype.Service;
 import java.time.LocalDateTime;
 import java.util.List;
 import java.util.ArrayList;
+import java.time.LocalDate;
 
 @Service
 public class OrderService {
@@ -21,6 +22,9 @@ public class OrderService {
 
     @Autowired
     private ProductRepository productRepository;
+
+    @Autowired
+    private PromotionRepository promotionRepository;
 
     // Listar todos os pedidos
     public List<Order> getAllOrders() {
@@ -45,39 +49,36 @@ public class OrderService {
 
         double total = 0;
 
-        List<OrderItem> items = new ArrayList<>();
-
         for (OrderItemDTO itemDTO : dto.getItems()) {
 
             Product product = productRepository.findById(itemDTO.getProductId())
                     .orElseThrow(() -> new ResourceNotFoundException("Product not found"));
 
             double price = product.getPrice();
-            int quantity = itemDTO.getQuantity();
 
-            double subtotal = price * quantity;
+            // Verificar se há promoção ativa para o produto
+            Promotion promotion = promotionRepository.findActivePromotion(product.getId(), LocalDate.now());
+            
+            if (promotion != null) {
+                price = price * (1 - promotion.getDiscountPercentage() / 100);
+            }
+
+            double subtotal = price * itemDTO.getQuantity();
             total += subtotal;
 
-            OrderItem item = new OrderItem();
-            item.setProduct(product);
-            item.setQuantity(quantity);
-            item.setPrice(price);
-            item.setOrder(order);
-
-            items.add(item);
         }
 
-        order.setItems(items);
-        order.setTotal(total);
+            order.setTotal(total);
+            
+            Order saveOrder = orderRepository.save(order);
 
-        Order savedOrder = orderRepository.save(order);
+            OrderResponseDTO responseDTO = new OrderResponseDTO();
+            responseDTO.setId(saveOrder.getId());
+            
+            responseDTO.setStatus(saveOrder.getStatus().name());
+            responseDTO.setTotal(saveOrder.getTotal());
 
-        OrderResponseDTO response = new OrderResponseDTO();
-        response.setId(savedOrder.getId());
-        response.setStatus(savedOrder.getStatus().name());
-        response.setTotal(savedOrder.getTotal());
-
-        return response;
+            return response;
     }
 
     // Atualizar o status de um pedido
