@@ -20,6 +20,9 @@ public class SecurityConfig {
         .csrf(csrf -> csrf.disable())
             .authorizeHttpRequests(auth -> auth
             .requestMatchers("/auth/**").permitAll() // Permitir acesso sem autenticação para endpoints de autenticação
+            .requestMatchers("/swagger-ui/**",
+                             "/swagger-ui.html",
+                             "/v3/api-docs/**").permitAll() // Permitir acesso sem autenticação para endpoints do Swagger
             .anyRequest().authenticated() // Exigir autenticação para todas as outras requisições
             )
 

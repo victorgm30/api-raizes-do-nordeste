@@ -74,11 +74,10 @@ public class OrderService {
 
             OrderResponseDTO responseDTO = new OrderResponseDTO();
             responseDTO.setId(saveOrder.getId());
-            
             responseDTO.setStatus(saveOrder.getStatus().name());
             responseDTO.setTotal(saveOrder.getTotal());
 
-            return response;
+            return responseDTO;
     }
 
     // Atualizar o status de um pedido
