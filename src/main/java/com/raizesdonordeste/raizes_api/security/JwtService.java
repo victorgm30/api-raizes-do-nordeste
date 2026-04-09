@@ -11,7 +11,8 @@ import java.util.Date;
 @Service
 public class JwtService {
 
-    private static final String SECRET = "my-key-for-jwt-secret"; // Chave secreta para assinar o token
+    // Chave secreta para assinar o token
+    private static final String SECRET = "my-super-secret-key-for-jwt-token-generation-12345678901234567890";
 
     private Key getKey() {
         return Keys.hmacShaKeyFor(SECRET.getBytes());
@@ -26,7 +27,7 @@ public class JwtService {
                 .compact();
     }
 
-    public String extracUsername(String token) {
+    public String extractUsername(String token) {
         return Jwts.parserBuilder()
                 .setSigningKey(getKey())
                 .build()
@@ -36,7 +37,7 @@ public class JwtService {
     }
 
     public boolean isTokenValid(String token, String username) {
-        return extracUsername(token).equals(username);
+        return extractUsername(token).equals(username);
        
     }
 

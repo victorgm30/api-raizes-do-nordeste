@@ -23,6 +23,13 @@ public class JwtFilter extends OncePerRequestFilter{
     private JwtService jwtService;
 
     @Override
+    protected boolean shouldNotFilter(HttpServletRequest request) {
+        String path = request.getServletPath();
+        // Permitir acesso sem autenticação para endpoints de autenticação e documentação
+        return path.startsWith("/auth/") || path.startsWith("/swagger-ui/") || path.startsWith("/v3/api-docs/");
+    }
+
+    @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, 
                                     FilterChain filterChain)
                                     throws ServletException, IOException {
@@ -36,7 +43,7 @@ public class JwtFilter extends OncePerRequestFilter{
 
         String token = authHeader.substring(7);
 
-        String username = jwtService.extracUsername(token);
+        String username = jwtService.extractUsername(token);
 
         if(username != null && SecurityContextHolder.getContext().getAuthentication() == null) {
             
