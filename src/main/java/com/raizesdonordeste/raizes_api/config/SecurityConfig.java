@@ -33,7 +33,8 @@ public class SecurityConfig {
             .requestMatchers("/swagger-ui/**",
                              "/v3/api-docs/**").permitAll()
             // Exigir autenticação para todas as outras requisições                  
-            .anyRequest().authenticated() 
+            //.anyRequest().authenticated() 
+            .anyRequest().permitAll()
             )
 
             // Adicionar o filtro JWT antes do filtro de autenticação do Spring Security

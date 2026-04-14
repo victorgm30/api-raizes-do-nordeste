@@ -12,8 +12,13 @@ import org.springframework.security.web.authentication.WebAuthenticationDetailsS
 import org.springframework.stereotype.Component;
 import org.springframework.web.filter.OncePerRequestFilter;
 
+import com.raizesdonordeste.raizes_api.service.JwtService;
+
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
+
 import java.io.IOException;
 import java.util.Collections;
+import java.util.List;
 
 // Interceptar as requisições HTTP para extrair e validar o token JWT.
 @Component
@@ -36,25 +41,34 @@ public class JwtFilter extends OncePerRequestFilter{
 
         String authHeader = request.getHeader("Authorization");
 
-        if (authHeader == null || !authHeader.startsWith("Bearer ")) {
+        if (authHeader != null && authHeader.startsWith("Bearer ")) {
             filterChain.doFilter(request, response);
             return;
+        }
+
+        try {
+            String token = authHeader.substring(7); 
+
+            String username = jwtService.extractUsername(token);
+
+            if (username != null && 
+                jwtService.isTokenValid(token, username) &&
+                SecurityContextHolder.getContext().getAuthentication() == null) {
+
+                UsernamePasswordAuthenticationToken authToken = 
+                    new UsernamePasswordAuthenticationToken(
+                        username, 
+                        null, 
+                        List.of(new SimpleGrantedAuthority("ROLE_USER")));
+
+                authToken.setDetails(new WebAuthenticationDetailsSource().buildDetails(request));
+
+                SecurityContextHolder.getContext().setAuthentication(authToken);
             }
-
-        String token = authHeader.substring(7);
-
-        String username = jwtService.extractUsername(token);
-
-        if(username != null && SecurityContextHolder.getContext().getAuthentication() == null) {
-            
-            UsernamePasswordAuthenticationToken authToken = 
-                new UsernamePasswordAuthenticationToken(username, null, Collections.emptyList());
-
-            authToken.setDetails(new WebAuthenticationDetailsSource().buildDetails(request));
-
-            SecurityContextHolder.getContext().setAuthentication(authToken);
-
-            }
+        }   catch (Exception e) {
+            // Log do erro de autenticação, se necessário
+            System.out.println("Erro de autenticação: " + e.getMessage());
+        }   
 
             filterChain.doFilter(request, response);
         }

@@ -3,6 +3,7 @@ package com.raizesdonordeste.raizes_api.controller;
 import com.raizesdonordeste.raizes_api.entity.Customer;
 import com.raizesdonordeste.raizes_api.repository.CustomerRepository;
 import com.raizesdonordeste.raizes_api.exception.ResourceNotFoundException;
+import com.raizesdonordeste.raizes_api.service.CustomerService;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -15,6 +16,9 @@ public class CustomerController {
 
     @Autowired
     private CustomerRepository customerRepository;
+
+    @Autowired
+    private CustomerService customerService;
     
     // Listar todos os clientes
     @GetMapping
@@ -35,8 +39,8 @@ public class CustomerController {
     
     // Criar um novo cliente
     @PostMapping
-    public Customer createCustomer(@RequestBody Customer customer) {
-        return customerRepository.save(customer);
+    public Customer create(@RequestBody Customer customer) {
+        return customerService.createCustomer(customer);
     }
 
     // Atualizar um cliente existente

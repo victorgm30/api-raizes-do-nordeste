@@ -1,9 +1,9 @@
 package com.raizesdonordeste.raizes_api.controller;
 
-import com.raizesdonordeste.raizes_api.security.JwtService;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+
+import com.raizesdonordeste.raizes_api.service.JwtService;
 
 import java.util.Map;
 

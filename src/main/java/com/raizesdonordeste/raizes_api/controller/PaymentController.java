@@ -2,6 +2,7 @@ package com.raizesdonordeste.raizes_api.controller;
 
 import com.raizesdonordeste.raizes_api.entity.*;
 import com.raizesdonordeste.raizes_api.enums.OrderStatus;
+import com.raizesdonordeste.raizes_api.enums.PaymentMethod;
 import com.raizesdonordeste.raizes_api.enums.PaymentStatus;
 import com.raizesdonordeste.raizes_api.repository.PaymentRepository;
 import com.raizesdonordeste.raizes_api.repository.OrderRepository;
@@ -11,6 +12,7 @@ import com.raizesdonordeste.raizes_api.exception.ResourceNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 @RestController
@@ -65,7 +67,12 @@ public class PaymentController {
         boolean approved = paymentService.processPayment(order.getTotal());
         
         Payment payment = new Payment();
+
         payment.setOrder(order);
+
+        payment.setAmount(order.getTotal());
+        payment.setMethod(PaymentMethod.PIX);
+        payment.setPaymentDate(LocalDateTime.now());
 
         if(approved) {
             payment.setStatus(PaymentStatus.APPROVED);

@@ -1,4 +1,4 @@
-package com.raizesdonordeste.raizes_api.security;
+package com.raizesdonordeste.raizes_api.service;
 
 import io.jsonwebtoken.*;
 import io.jsonwebtoken.security.Keys;

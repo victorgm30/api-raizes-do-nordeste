@@ -26,6 +26,9 @@ public class OrderService {
     @Autowired
     private PromotionRepository promotionRepository;
 
+    @Autowired
+    private CustomerRepository customerRepository;
+
     // Listar todos os pedidos
     public List<Order> getAllOrders() {
         return orderRepository.findAll();
@@ -42,12 +45,20 @@ public class OrderService {
 
     // Criar um novo pedido
     public OrderResponseDTO createOrder(CreateOrderDTO dto) {
+
         Order order = new Order();
         order.setOrderDate(LocalDateTime.now());
         order.setStatus(OrderStatus.RECEIVED);
         order.setChannel(dto.getChannel());
 
+        Customer customer = customerRepository.findById(dto.getCustomerId())
+                .orElseThrow(() -> new ResourceNotFoundException("Customer not found"));
+
+        order.setCustomer(customer);        
+
         double total = 0;
+
+        List<OrderItem> orderItems = new ArrayList<>();
 
         for (OrderItemDTO itemDTO : dto.getItems()) {
 
@@ -66,8 +77,17 @@ public class OrderService {
             double subtotal = price * itemDTO.getQuantity();
             total += subtotal;
 
+            OrderItem orderItem = new OrderItem();
+            orderItem.setProduct(product);
+            orderItem.setQuantity(itemDTO.getQuantity());
+            orderItem.setPrice(price);
+            orderItem.setOrder(order);
+
+            orderItems.add(orderItem);
+
         }
 
+            order.setItems(orderItems);
             order.setTotal(total);
             
             Order saveOrder = orderRepository.save(order);
