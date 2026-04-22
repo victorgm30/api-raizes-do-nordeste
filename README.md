@@ -163,6 +163,12 @@ Os testes foram realizados utilizando o Postman, incluindo:
 -> Atualização de status
 -> Cenários de erro (404, 403)
 
+A collection com os testes da API está disponível em:
+
+/postman/OpenAPI definition_Raizes_do_Nordeste_collection.json
+
+Importe no Postman para executar os testes.
+
 ---
 
 ## Estrutura do Projeto

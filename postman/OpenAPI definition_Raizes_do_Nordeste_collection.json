@@ -1,0 +1,3767 @@
+{
+  "info": {
+    "_postman_id": "17741b6f-2cc0-4bf4-8af0-21454f122ee7",
+    "name": "OpenAPI definition_Raizes_do_Nordeste",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "47529742",
+    "_collection_link": "https://go.postman.co/collection/47529742-17741b6f-2cc0-4bf4-8af0-21454f122ee7?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "units",
+      "item": [
+        {
+          "name": "{id}",
+          "item": [
+            {
+              "name": "get Unit By Id",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/units/:id",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "units",
+                    ":id"
+                  ],
+                  "variable": [
+                    {
+                      "key": "id",
+                      "value": "8336"
+                    }
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "name": "OK",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "*/*"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/units/:id",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "units",
+                        ":id"
+                      ],
+                      "variable": [
+                        {
+                          "key": "id",
+                          "value": "8336"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "*/*"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "{\n  \"id\": 6354,\n  \"name\": \"string\",\n  \"address\": \"string\",\n  \"city\": \"string\"\n}"
+                }
+              ]
+            },
+            {
+              "name": "update Unit",
+              "request": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"id\": 6354,\n  \"name\": \"string\",\n  \"address\": \"string\",\n  \"city\": \"string\"\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/units/:id",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "units",
+                    ":id"
+                  ],
+                  "variable": [
+                    {
+                      "key": "id",
+                      "value": "8336"
+                    }
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "name": "OK",
+                  "originalRequest": {
+                    "method": "PUT",
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "*/*"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n  \"id\": 6354,\n  \"name\": \"string\",\n  \"address\": \"string\",\n  \"city\": \"string\"\n}",
+                      "options": {
+                        "raw": {
+                          "headerFamily": "json",
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/units/:id",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "units",
+                        ":id"
+                      ],
+                      "variable": [
+                        {
+                          "key": "id",
+                          "value": "8336"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "*/*"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "{\n  \"id\": 6354,\n  \"name\": \"string\",\n  \"address\": \"string\",\n  \"city\": \"string\"\n}"
+                }
+              ]
+            },
+            {
+              "name": "delete Unit",
+              "request": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/units/:id",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "units",
+                    ":id"
+                  ],
+                  "variable": [
+                    {
+                      "key": "id",
+                      "value": "8336"
+                    }
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "name": "OK",
+                  "originalRequest": {
+                    "method": "DELETE",
+                    "header": [],
+                    "url": {
+                      "raw": "{{baseUrl}}/units/:id",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "units",
+                        ":id"
+                      ],
+                      "variable": [
+                        {
+                          "key": "id",
+                          "value": "8336"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "body": ""
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Get All Units",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/units",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "units"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "OK",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/units",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "units"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "text",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "cookie": [],
+              "body": "[\n  {\n    \"id\": 6336,\n    \"name\": \"string\",\n    \"address\": \"string\",\n    \"city\": \"string\"\n  },\n  {\n    \"id\": 7393,\n    \"name\": \"string\",\n    \"address\": \"string\",\n    \"city\": \"string\"\n  }\n]"
+            }
+          ]
+        },
+        {
+          "name": "Create Unit",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": 6354,\n  \"name\": \"string\",\n  \"address\": \"string\",\n  \"city\": \"string\"\n}",
+              "options": {
+                "raw": {
+                  "headerFamily": "json",
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/units",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "units"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "OK",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"id\": 6354,\n  \"name\": \"string\",\n  \"address\": \"string\",\n  \"city\": \"string\"\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/units",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "units"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "text",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n  \"id\": 6354,\n  \"name\": \"string\",\n  \"address\": \"string\",\n  \"city\": \"string\"\n}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "stocks",
+      "item": [
+        {
+          "name": "{id}",
+          "item": [
+            {
+              "name": "get Stock By Id",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/stocks/:id",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "stocks",
+                    ":id"
+                  ],
+                  "variable": [
+                    {
+                      "key": "id",
+                      "value": "8336"
+                    }
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "name": "OK",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "*/*"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/stocks/:id",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "stocks",
+                        ":id"
+                      ],
+                      "variable": [
+                        {
+                          "key": "id",
+                          "value": "8336"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "*/*"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "{\n  \"id\": 9553,\n  \"quantity\": 3390,\n  \"product\": {\n    \"id\": 1774,\n    \"name\": \"string\",\n    \"description\": \"string\",\n    \"price\": 4611.408716516526,\n    \"active\": false,\n    \"category\": {\n      \"id\": 8439,\n      \"name\": \"string\",\n      \"description\": \"string\"\n    },\n    \"unit\": {\n      \"id\": 2730,\n      \"name\": \"string\",\n      \"address\": \"string\",\n      \"city\": \"string\"\n    }\n  }\n}"
+                }
+              ]
+            },
+            {
+              "name": "update Stock",
+              "request": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"id\": 9553,\n  \"quantity\": 3390,\n  \"product\": {\n    \"id\": 1774,\n    \"name\": \"string\",\n    \"description\": \"string\",\n    \"price\": 4611.408716516526,\n    \"active\": false,\n    \"category\": {\n      \"id\": 8439,\n      \"name\": \"string\",\n      \"description\": \"string\"\n    },\n    \"unit\": {\n      \"id\": 2730,\n      \"name\": \"string\",\n      \"address\": \"string\",\n      \"city\": \"string\"\n    }\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/stocks/:id",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "stocks",
+                    ":id"
+                  ],
+                  "variable": [
+                    {
+                      "key": "id",
+                      "value": "8336"
+                    }
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "name": "OK",
+                  "originalRequest": {
+                    "method": "PUT",
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "*/*"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n  \"id\": 9553,\n  \"quantity\": 3390,\n  \"product\": {\n    \"id\": 1774,\n    \"name\": \"string\",\n    \"description\": \"string\",\n    \"price\": 4611.408716516526,\n    \"active\": false,\n    \"category\": {\n      \"id\": 8439,\n      \"name\": \"string\",\n      \"description\": \"string\"\n    },\n    \"unit\": {\n      \"id\": 2730,\n      \"name\": \"string\",\n      \"address\": \"string\",\n      \"city\": \"string\"\n    }\n  }\n}",
+                      "options": {
+                        "raw": {
+                          "headerFamily": "json",
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/stocks/:id",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "stocks",
+                        ":id"
+                      ],
+                      "variable": [
+                        {
+                          "key": "id",
+                          "value": "8336"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "*/*"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "{\n  \"id\": 9553,\n  \"quantity\": 3390,\n  \"product\": {\n    \"id\": 1774,\n    \"name\": \"string\",\n    \"description\": \"string\",\n    \"price\": 4611.408716516526,\n    \"active\": false,\n    \"category\": {\n      \"id\": 8439,\n      \"name\": \"string\",\n      \"description\": \"string\"\n    },\n    \"unit\": {\n      \"id\": 2730,\n      \"name\": \"string\",\n      \"address\": \"string\",\n      \"city\": \"string\"\n    }\n  }\n}"
+                }
+              ]
+            },
+            {
+              "name": "delete Stock",
+              "request": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/stocks/:id",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "stocks",
+                    ":id"
+                  ],
+                  "variable": [
+                    {
+                      "key": "id",
+                      "value": "8336"
+                    }
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "name": "OK",
+                  "originalRequest": {
+                    "method": "DELETE",
+                    "header": [],
+                    "url": {
+                      "raw": "{{baseUrl}}/stocks/:id",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "stocks",
+                        ":id"
+                      ],
+                      "variable": [
+                        {
+                          "key": "id",
+                          "value": "8336"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "body": ""
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Get All Stocks",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/stocks",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "stocks"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "OK",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/stocks",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "stocks"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "text",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "cookie": [],
+              "body": "[\n  {\n    \"id\": 5464,\n    \"quantity\": 1676,\n    \"product\": {\n      \"id\": 4920,\n      \"name\": \"string\",\n      \"description\": \"string\",\n      \"price\": 6975.522479856975,\n      \"active\": true,\n      \"category\": {\n        \"id\": 4599,\n        \"name\": \"string\",\n        \"description\": \"string\"\n      },\n      \"unit\": {\n        \"id\": 9652,\n        \"name\": \"string\",\n        \"address\": \"string\",\n        \"city\": \"string\"\n      }\n    }\n  },\n  {\n    \"id\": 6671,\n    \"quantity\": 723,\n    \"product\": {\n      \"id\": 8104,\n      \"name\": \"string\",\n      \"description\": \"string\",\n      \"price\": 9908.603208775648,\n      \"active\": false,\n      \"category\": {\n        \"id\": 6770,\n        \"name\": \"string\",\n        \"description\": \"string\"\n      },\n      \"unit\": {\n        \"id\": 1641,\n        \"name\": \"string\",\n        \"address\": \"string\",\n        \"city\": \"string\"\n      }\n    }\n  }\n]"
+            }
+          ]
+        },
+        {
+          "name": "Create Stock",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": 9553,\n  \"quantity\": 3390,\n  \"product\": {\n    \"id\": 1774,\n    \"name\": \"string\",\n    \"description\": \"string\",\n    \"price\": 4611.408716516526,\n    \"active\": false,\n    \"category\": {\n      \"id\": 8439,\n      \"name\": \"string\",\n      \"description\": \"string\"\n    },\n    \"unit\": {\n      \"id\": 2730,\n      \"name\": \"string\",\n      \"address\": \"string\",\n      \"city\": \"string\"\n    }\n  }\n}",
+              "options": {
+                "raw": {
+                  "headerFamily": "json",
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/stocks",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "stocks"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "OK",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"id\": 9553,\n  \"quantity\": 3390,\n  \"product\": {\n    \"id\": 1774,\n    \"name\": \"string\",\n    \"description\": \"string\",\n    \"price\": 4611.408716516526,\n    \"active\": false,\n    \"category\": {\n      \"id\": 8439,\n      \"name\": \"string\",\n      \"description\": \"string\"\n    },\n    \"unit\": {\n      \"id\": 2730,\n      \"name\": \"string\",\n      \"address\": \"string\",\n      \"city\": \"string\"\n    }\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/stocks",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "stocks"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "text",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n  \"id\": 9553,\n  \"quantity\": 3390,\n  \"product\": {\n    \"id\": 1774,\n    \"name\": \"string\",\n    \"description\": \"string\",\n    \"price\": 4611.408716516526,\n    \"active\": false,\n    \"category\": {\n      \"id\": 8439,\n      \"name\": \"string\",\n      \"description\": \"string\"\n    },\n    \"unit\": {\n      \"id\": 2730,\n      \"name\": \"string\",\n      \"address\": \"string\",\n      \"city\": \"string\"\n    }\n  }\n}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "products",
+      "item": [
+        {
+          "name": "{id}",
+          "item": [
+            {
+              "name": "get Product By Id",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/products/:id",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "products",
+                    ":id"
+                  ],
+                  "variable": [
+                    {
+                      "key": "id",
+                      "value": "8336"
+                    }
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "name": "OK",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "*/*"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/products/:id",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "products",
+                        ":id"
+                      ],
+                      "variable": [
+                        {
+                          "key": "id",
+                          "value": "8336"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "*/*"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "{\n  \"id\": 8758,\n  \"name\": \"string\",\n  \"description\": \"string\",\n  \"price\": 6364.399051052199,\n  \"active\": false,\n  \"category\": {\n    \"id\": 9368,\n    \"name\": \"string\",\n    \"description\": \"string\"\n  },\n  \"unit\": {\n    \"id\": 8158,\n    \"name\": \"string\",\n    \"address\": \"string\",\n    \"city\": \"string\"\n  }\n}"
+                }
+              ]
+            },
+            {
+              "name": "update Product",
+              "request": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"id\": 8758,\n  \"name\": \"string\",\n  \"description\": \"string\",\n  \"price\": 6364.399051052199,\n  \"active\": false,\n  \"category\": {\n    \"id\": 9368,\n    \"name\": \"string\",\n    \"description\": \"string\"\n  },\n  \"unit\": {\n    \"id\": 8158,\n    \"name\": \"string\",\n    \"address\": \"string\",\n    \"city\": \"string\"\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/products/:id",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "products",
+                    ":id"
+                  ],
+                  "variable": [
+                    {
+                      "key": "id",
+                      "value": "8336"
+                    }
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "name": "OK",
+                  "originalRequest": {
+                    "method": "PUT",
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "*/*"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n  \"id\": 8758,\n  \"name\": \"string\",\n  \"description\": \"string\",\n  \"price\": 6364.399051052199,\n  \"active\": false,\n  \"category\": {\n    \"id\": 9368,\n    \"name\": \"string\",\n    \"description\": \"string\"\n  },\n  \"unit\": {\n    \"id\": 8158,\n    \"name\": \"string\",\n    \"address\": \"string\",\n    \"city\": \"string\"\n  }\n}",
+                      "options": {
+                        "raw": {
+                          "headerFamily": "json",
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/products/:id",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "products",
+                        ":id"
+                      ],
+                      "variable": [
+                        {
+                          "key": "id",
+                          "value": "8336"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "*/*"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "{\n  \"id\": 8758,\n  \"name\": \"string\",\n  \"description\": \"string\",\n  \"price\": 6364.399051052199,\n  \"active\": false,\n  \"category\": {\n    \"id\": 9368,\n    \"name\": \"string\",\n    \"description\": \"string\"\n  },\n  \"unit\": {\n    \"id\": 8158,\n    \"name\": \"string\",\n    \"address\": \"string\",\n    \"city\": \"string\"\n  }\n}"
+                }
+              ]
+            },
+            {
+              "name": "delete Product",
+              "request": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/products/:id",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "products",
+                    ":id"
+                  ],
+                  "variable": [
+                    {
+                      "key": "id",
+                      "value": "8336"
+                    }
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "name": "OK",
+                  "originalRequest": {
+                    "method": "DELETE",
+                    "header": [],
+                    "url": {
+                      "raw": "{{baseUrl}}/products/:id",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "products",
+                        ":id"
+                      ],
+                      "variable": [
+                        {
+                          "key": "id",
+                          "value": "8336"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "body": ""
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Get All Products",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/products",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "products"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "OK",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/products",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "products"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "text",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "cookie": [],
+              "body": "[\n  {\n    \"id\": 9831,\n    \"name\": \"string\",\n    \"description\": \"string\",\n    \"price\": 137.98128471670833,\n    \"active\": false,\n    \"category\": {\n      \"id\": 9929,\n      \"name\": \"string\",\n      \"description\": \"string\"\n    },\n    \"unit\": {\n      \"id\": 490,\n      \"name\": \"string\",\n      \"address\": \"string\",\n      \"city\": \"string\"\n    }\n  },\n  {\n    \"id\": 1698,\n    \"name\": \"string\",\n    \"description\": \"string\",\n    \"price\": 8739.915929510977,\n    \"active\": true,\n    \"category\": {\n      \"id\": 7554,\n      \"name\": \"string\",\n      \"description\": \"string\"\n    },\n    \"unit\": {\n      \"id\": 7270,\n      \"name\": \"string\",\n      \"address\": \"string\",\n      \"city\": \"string\"\n    }\n  }\n]"
+            }
+          ]
+        },
+        {
+          "name": "Create Product",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTc3NjA5NDA3OSwiZXhwIjoxNzc2MDk3Njc5fQ.wzlSD1L7c-2IsI0JbrvGPQ5No4ATMLR0UGYeMtFd3mY",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Cuscuz\",\n  \"description\": \"Cuscuz nordestino.\",\n  \"price\": 20.00,\n  \"active\": true,\n  \"categoryId\": 2,\n  \"unitId\": 1\n\n}",
+              "options": {
+                "raw": {
+                  "headerFamily": "json",
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/products",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "products"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "OK",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"id\": 8758,\n  \"name\": \"string\",\n  \"description\": \"string\",\n  \"price\": 6364.399051052199,\n  \"active\": false,\n  \"category\": {\n    \"id\": 9368,\n    \"name\": \"string\",\n    \"description\": \"string\"\n  },\n  \"unit\": {\n    \"id\": 8158,\n    \"name\": \"string\",\n    \"address\": \"string\",\n    \"city\": \"string\"\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/products",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "products"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "text",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n  \"id\": 8758,\n  \"name\": \"string\",\n  \"description\": \"string\",\n  \"price\": 6364.399051052199,\n  \"active\": false,\n  \"category\": {\n    \"id\": 9368,\n    \"name\": \"string\",\n    \"description\": \"string\"\n  },\n  \"unit\": {\n    \"id\": 8158,\n    \"name\": \"string\",\n    \"address\": \"string\",\n    \"city\": \"string\"\n  }\n}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "customers",
+      "item": [
+        {
+          "name": "{id}",
+          "item": [
+            {
+              "name": "get Customer By Id",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/customers/:id",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "customers",
+                    ":id"
+                  ],
+                  "variable": [
+                    {
+                      "key": "id",
+                      "value": "8336"
+                    }
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "name": "OK",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "*/*"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/customers/:id",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "customers",
+                        ":id"
+                      ],
+                      "variable": [
+                        {
+                          "key": "id",
+                          "value": "8336"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "*/*"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "{\n  \"id\": 134,\n  \"name\": \"string\",\n  \"email\": \"string\",\n  \"phoneNumber\": \"string\",\n  \"address\": \"string\",\n  \"registrationDate\": \"1990-06-09T22:01:17.283Z\"\n}"
+                }
+              ]
+            },
+            {
+              "name": "update Customer",
+              "request": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"id\": 134,\n  \"name\": \"string\",\n  \"email\": \"string\",\n  \"phoneNumber\": \"string\",\n  \"address\": \"string\",\n  \"registrationDate\": \"1990-06-09T22:01:17.283Z\"\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/customers/:id",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "customers",
+                    ":id"
+                  ],
+                  "variable": [
+                    {
+                      "key": "id",
+                      "value": "8336"
+                    }
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "name": "OK",
+                  "originalRequest": {
+                    "method": "PUT",
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "*/*"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n  \"id\": 134,\n  \"name\": \"string\",\n  \"email\": \"string\",\n  \"phoneNumber\": \"string\",\n  \"address\": \"string\",\n  \"registrationDate\": \"1990-06-09T22:01:17.283Z\"\n}",
+                      "options": {
+                        "raw": {
+                          "headerFamily": "json",
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/customers/:id",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "customers",
+                        ":id"
+                      ],
+                      "variable": [
+                        {
+                          "key": "id",
+                          "value": "8336"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "*/*"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "{\n  \"id\": 134,\n  \"name\": \"string\",\n  \"email\": \"string\",\n  \"phoneNumber\": \"string\",\n  \"address\": \"string\",\n  \"registrationDate\": \"1990-06-09T22:01:17.283Z\"\n}"
+                }
+              ]
+            },
+            {
+              "name": "delete Customer",
+              "request": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/customers/:id",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "customers",
+                    ":id"
+                  ],
+                  "variable": [
+                    {
+                      "key": "id",
+                      "value": "8336"
+                    }
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "name": "OK",
+                  "originalRequest": {
+                    "method": "DELETE",
+                    "header": [],
+                    "url": {
+                      "raw": "{{baseUrl}}/customers/:id",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "customers",
+                        ":id"
+                      ],
+                      "variable": [
+                        {
+                          "key": "id",
+                          "value": "8336"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "body": ""
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "search",
+          "item": [
+            {
+              "name": "search Customers By Name",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/customers/search?name=string",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "customers",
+                    "search"
+                  ],
+                  "query": [
+                    {
+                      "key": "name",
+                      "value": "string"
+                    }
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "name": "OK",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "*/*"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/customers/search?name=string",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "customers",
+                        "search"
+                      ],
+                      "query": [
+                        {
+                          "key": "name",
+                          "value": "string"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "*/*"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "[\n  {\n    \"id\": 2743,\n    \"name\": \"string\",\n    \"email\": \"string\",\n    \"phoneNumber\": \"string\",\n    \"address\": \"string\",\n    \"registrationDate\": \"1985-11-12T13:28:27.863Z\"\n  },\n  {\n    \"id\": 8190,\n    \"name\": \"string\",\n    \"email\": \"string\",\n    \"phoneNumber\": \"string\",\n    \"address\": \"string\",\n    \"registrationDate\": \"1947-11-15T15:14:53.437Z\"\n  }\n]"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Get All Customers",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/customers",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "customers"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "OK",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/customers",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "customers"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "text",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "cookie": [],
+              "body": "[\n  {\n    \"id\": 2743,\n    \"name\": \"string\",\n    \"email\": \"string\",\n    \"phoneNumber\": \"string\",\n    \"address\": \"string\",\n    \"registrationDate\": \"1985-11-12T13:28:27.863Z\"\n  },\n  {\n    \"id\": 8190,\n    \"name\": \"string\",\n    \"email\": \"string\",\n    \"phoneNumber\": \"string\",\n    \"address\": \"string\",\n    \"registrationDate\": \"1947-11-15T15:14:53.437Z\"\n  }\n]"
+            }
+          ]
+        },
+        {
+          "name": "Create Customer",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTc3NjE2NjMyMiwiZXhwIjoxNzc2MTY5OTIyfQ.TeKQlFgaPIH0htCMH8Pux8q6nYEwX86COLED_LBq3ZA",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Maria Lima\",\n  \"email\": \"maria@email.com\",\n  \"phoneNumber\": \"(81)95555-6666\",\n  \"address\": \"Rua da Vitória, 50\"\n}",
+              "options": {
+                "raw": {
+                  "headerFamily": "json",
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/customers",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "customers"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "OK",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"id\": 134,\n  \"name\": \"string\",\n  \"email\": \"string\",\n  \"phoneNumber\": \"string\",\n  \"address\": \"string\",\n  \"registrationDate\": \"1990-06-09T22:01:17.283Z\"\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/customers",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "customers"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "text",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n  \"id\": 134,\n  \"name\": \"string\",\n  \"email\": \"string\",\n  \"phoneNumber\": \"string\",\n  \"address\": \"string\",\n  \"registrationDate\": \"1990-06-09T22:01:17.283Z\"\n}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "categories",
+      "item": [
+        {
+          "name": "{id}",
+          "item": [
+            {
+              "name": "get Category By Id",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/categories/:id",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "categories",
+                    ":id"
+                  ],
+                  "variable": [
+                    {
+                      "key": "id",
+                      "value": "8336"
+                    }
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "name": "OK",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "*/*"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/categories/:id",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "categories",
+                        ":id"
+                      ],
+                      "variable": [
+                        {
+                          "key": "id",
+                          "value": "8336"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "*/*"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "{\n  \"id\": 3438,\n  \"name\": \"string\",\n  \"description\": \"string\"\n}"
+                }
+              ]
+            },
+            {
+              "name": "update Category",
+              "request": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"id\": 3438,\n  \"name\": \"string\",\n  \"description\": \"string\"\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/categories/:id",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "categories",
+                    ":id"
+                  ],
+                  "variable": [
+                    {
+                      "key": "id",
+                      "value": "8336"
+                    }
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "name": "OK",
+                  "originalRequest": {
+                    "method": "PUT",
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "*/*"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n  \"id\": 3438,\n  \"name\": \"string\",\n  \"description\": \"string\"\n}",
+                      "options": {
+                        "raw": {
+                          "headerFamily": "json",
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/categories/:id",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "categories",
+                        ":id"
+                      ],
+                      "variable": [
+                        {
+                          "key": "id",
+                          "value": "8336"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "*/*"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "{\n  \"id\": 3438,\n  \"name\": \"string\",\n  \"description\": \"string\"\n}"
+                }
+              ]
+            },
+            {
+              "name": "delete Category",
+              "request": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/categories/:id",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "categories",
+                    ":id"
+                  ],
+                  "variable": [
+                    {
+                      "key": "id",
+                      "value": "8336"
+                    }
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "name": "OK",
+                  "originalRequest": {
+                    "method": "DELETE",
+                    "header": [],
+                    "url": {
+                      "raw": "{{baseUrl}}/categories/:id",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "categories",
+                        ":id"
+                      ],
+                      "variable": [
+                        {
+                          "key": "id",
+                          "value": "8336"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "body": ""
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "get All Categories",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/categories",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "categories"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "OK",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/categories",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "categories"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "text",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "cookie": [],
+              "body": "[\n  {\n    \"id\": 7829,\n    \"name\": \"string\",\n    \"description\": \"string\"\n  },\n  {\n    \"id\": 7105,\n    \"name\": \"string\",\n    \"description\": \"string\"\n  }\n]"
+            }
+          ]
+        },
+        {
+          "name": "create Category",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTc3NjA5NDA3OSwiZXhwIjoxNzc2MDk3Njc5fQ.wzlSD1L7c-2IsI0JbrvGPQ5No4ATMLR0UGYeMtFd3mY",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Comidas típicas\",\n  \"description\": \"Pratos típicos da casa.\"\n}",
+              "options": {
+                "raw": {
+                  "headerFamily": "json",
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/categories",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "categories"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "OK",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"id\": 3438,\n  \"name\": \"string\",\n  \"description\": \"string\"\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/categories",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "categories"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "text",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n  \"id\": 3438,\n  \"name\": \"string\",\n  \"description\": \"string\"\n}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "payments",
+      "item": [
+        {
+          "name": "process",
+          "item": [
+            {
+              "name": "{orderId}",
+              "item": [
+                {
+                  "name": "process Payment",
+                  "request": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "*/*"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/payments/process/:orderId",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "payments",
+                        "process",
+                        ":orderId"
+                      ],
+                      "variable": [
+                        {
+                          "key": "orderId",
+                          "value": "8336"
+                        }
+                      ]
+                    }
+                  },
+                  "response": [
+                    {
+                      "name": "OK",
+                      "originalRequest": {
+                        "method": "POST",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "*/*"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/payments/process/:orderId",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "payments",
+                            "process",
+                            ":orderId"
+                          ],
+                          "variable": [
+                            {
+                              "key": "orderId",
+                              "value": "8336"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "text",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "*/*"
+                        }
+                      ],
+                      "cookie": [],
+                      "body": "{\n  \"id\": 2781,\n  \"amount\": 4405.775276593673,\n  \"method\": \"CASH\",\n  \"status\": \"APPROVED\",\n  \"paymentDate\": \"2015-09-22T16:28:03.728Z\",\n  \"order\": {\n    \"id\": 155,\n    \"orderDate\": \"1955-06-01T06:21:21.072Z\",\n    \"total\": 4147.878055742555,\n    \"status\": \"DELIVERED\",\n    \"channel\": \"BALCAO\",\n    \"items\": [\n      {\n        \"id\": 5340,\n        \"quantity\": 7986,\n        \"price\": 4290.072709133823,\n        \"product\": {\n          \"id\": 5884,\n          \"name\": \"string\",\n          \"description\": \"string\",\n          \"price\": 8163.225897535733,\n          \"active\": true,\n          \"category\": {\n            \"id\": 9878,\n            \"name\": \"string\",\n            \"description\": \"string\"\n          },\n          \"unit\": {\n            \"id\": 7803,\n            \"name\": \"string\",\n            \"address\": \"string\",\n            \"city\": \"string\"\n          }\n        }\n      },\n      {\n        \"id\": 5035,\n        \"quantity\": 6437,\n        \"price\": 1042.5329613357314,\n        \"product\": {\n          \"id\": 4073,\n          \"name\": \"string\",\n          \"description\": \"string\",\n          \"price\": 1221.9797692827794,\n          \"active\": true,\n          \"category\": {\n            \"id\": 142,\n            \"name\": \"string\",\n            \"description\": \"string\"\n          },\n          \"unit\": {\n            \"id\": 8874,\n            \"name\": \"string\",\n            \"address\": \"string\",\n            \"city\": \"string\"\n          }\n        }\n      }\n    ],\n    \"customer\": {\n      \"id\": 605,\n      \"name\": \"string\",\n      \"email\": \"string\",\n      \"phoneNumber\": \"string\",\n      \"address\": \"string\",\n      \"registrationDate\": \"2010-11-06T01:02:34.713Z\"\n    }\n  }\n}"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "{id}",
+          "item": [
+            {
+              "name": "status",
+              "item": [
+                {
+                  "name": "update Payment Status",
+                  "request": {
+                    "method": "PATCH",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "*/*"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/payments/:id/status?status=string",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "payments",
+                        ":id",
+                        "status"
+                      ],
+                      "query": [
+                        {
+                          "key": "status",
+                          "value": "string"
+                        }
+                      ],
+                      "variable": [
+                        {
+                          "key": "id",
+                          "value": "8336"
+                        }
+                      ]
+                    }
+                  },
+                  "response": [
+                    {
+                      "name": "OK",
+                      "originalRequest": {
+                        "method": "PATCH",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "*/*"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/payments/:id/status?status=string",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "payments",
+                            ":id",
+                            "status"
+                          ],
+                          "query": [
+                            {
+                              "key": "status",
+                              "value": "string"
+                            }
+                          ],
+                          "variable": [
+                            {
+                              "key": "id",
+                              "value": "8336"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "text",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "*/*"
+                        }
+                      ],
+                      "cookie": [],
+                      "body": "{\n  \"id\": 2781,\n  \"amount\": 4405.775276593673,\n  \"method\": \"CASH\",\n  \"status\": \"APPROVED\",\n  \"paymentDate\": \"2015-09-22T16:28:03.728Z\",\n  \"order\": {\n    \"id\": 155,\n    \"orderDate\": \"1955-06-01T06:21:21.072Z\",\n    \"total\": 4147.878055742555,\n    \"status\": \"DELIVERED\",\n    \"channel\": \"BALCAO\",\n    \"items\": [\n      {\n        \"id\": 5340,\n        \"quantity\": 7986,\n        \"price\": 4290.072709133823,\n        \"product\": {\n          \"id\": 5884,\n          \"name\": \"string\",\n          \"description\": \"string\",\n          \"price\": 8163.225897535733,\n          \"active\": true,\n          \"category\": {\n            \"id\": 9878,\n            \"name\": \"string\",\n            \"description\": \"string\"\n          },\n          \"unit\": {\n            \"id\": 7803,\n            \"name\": \"string\",\n            \"address\": \"string\",\n            \"city\": \"string\"\n          }\n        }\n      },\n      {\n        \"id\": 5035,\n        \"quantity\": 6437,\n        \"price\": 1042.5329613357314,\n        \"product\": {\n          \"id\": 4073,\n          \"name\": \"string\",\n          \"description\": \"string\",\n          \"price\": 1221.9797692827794,\n          \"active\": true,\n          \"category\": {\n            \"id\": 142,\n            \"name\": \"string\",\n            \"description\": \"string\"\n          },\n          \"unit\": {\n            \"id\": 8874,\n            \"name\": \"string\",\n            \"address\": \"string\",\n            \"city\": \"string\"\n          }\n        }\n      }\n    ],\n    \"customer\": {\n      \"id\": 605,\n      \"name\": \"string\",\n      \"email\": \"string\",\n      \"phoneNumber\": \"string\",\n      \"address\": \"string\",\n      \"registrationDate\": \"2010-11-06T01:02:34.713Z\"\n    }\n  }\n}"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "get Payment By Id",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/payments/:id",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "payments",
+                    ":id"
+                  ],
+                  "variable": [
+                    {
+                      "key": "id",
+                      "value": "8336"
+                    }
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "name": "OK",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "*/*"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/payments/:id",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "payments",
+                        ":id"
+                      ],
+                      "variable": [
+                        {
+                          "key": "id",
+                          "value": "8336"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "*/*"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "{\n  \"id\": 2781,\n  \"amount\": 4405.775276593673,\n  \"method\": \"CASH\",\n  \"status\": \"APPROVED\",\n  \"paymentDate\": \"2015-09-22T16:28:03.728Z\",\n  \"order\": {\n    \"id\": 155,\n    \"orderDate\": \"1955-06-01T06:21:21.072Z\",\n    \"total\": 4147.878055742555,\n    \"status\": \"DELIVERED\",\n    \"channel\": \"BALCAO\",\n    \"items\": [\n      {\n        \"id\": 5340,\n        \"quantity\": 7986,\n        \"price\": 4290.072709133823,\n        \"product\": {\n          \"id\": 5884,\n          \"name\": \"string\",\n          \"description\": \"string\",\n          \"price\": 8163.225897535733,\n          \"active\": true,\n          \"category\": {\n            \"id\": 9878,\n            \"name\": \"string\",\n            \"description\": \"string\"\n          },\n          \"unit\": {\n            \"id\": 7803,\n            \"name\": \"string\",\n            \"address\": \"string\",\n            \"city\": \"string\"\n          }\n        }\n      },\n      {\n        \"id\": 5035,\n        \"quantity\": 6437,\n        \"price\": 1042.5329613357314,\n        \"product\": {\n          \"id\": 4073,\n          \"name\": \"string\",\n          \"description\": \"string\",\n          \"price\": 1221.9797692827794,\n          \"active\": true,\n          \"category\": {\n            \"id\": 142,\n            \"name\": \"string\",\n            \"description\": \"string\"\n          },\n          \"unit\": {\n            \"id\": 8874,\n            \"name\": \"string\",\n            \"address\": \"string\",\n            \"city\": \"string\"\n          }\n        }\n      }\n    ],\n    \"customer\": {\n      \"id\": 605,\n      \"name\": \"string\",\n      \"email\": \"string\",\n      \"phoneNumber\": \"string\",\n      \"address\": \"string\",\n      \"registrationDate\": \"2010-11-06T01:02:34.713Z\"\n    }\n  }\n}"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "get All Payments",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/payments",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "payments"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "OK",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/payments",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "payments"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "text",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "cookie": [],
+              "body": "[\n  {\n    \"id\": 2717,\n    \"amount\": 6962.04711333805,\n    \"method\": \"CASH\",\n    \"status\": \"APPROVED\",\n    \"paymentDate\": \"2016-10-07T09:29:36.717Z\",\n    \"order\": {\n      \"id\": 4988,\n      \"orderDate\": \"1956-02-16T06:31:26.446Z\",\n      \"total\": 2070.796051075885,\n      \"status\": \"PAID\",\n      \"channel\": \"TOTEM\",\n      \"items\": [\n        {\n          \"id\": 3096,\n          \"quantity\": 5359,\n          \"price\": 4560.575468933994,\n          \"product\": {\n            \"id\": 918,\n            \"name\": \"string\",\n            \"description\": \"string\",\n            \"price\": 8825.815178648227,\n            \"active\": true,\n            \"category\": {\n              \"id\": 6335,\n              \"name\": \"string\",\n              \"description\": \"string\"\n            },\n            \"unit\": {\n              \"id\": 3025,\n              \"name\": \"string\",\n              \"address\": \"string\",\n              \"city\": \"string\"\n            }\n          }\n        },\n        {\n          \"id\": 8774,\n          \"quantity\": 6610,\n          \"price\": 8312.097888321086,\n          \"product\": {\n            \"id\": 5186,\n            \"name\": \"string\",\n            \"description\": \"string\",\n            \"price\": 4218.685174090413,\n            \"active\": false,\n            \"category\": {\n              \"id\": 2924,\n              \"name\": \"string\",\n              \"description\": \"string\"\n            },\n            \"unit\": {\n              \"id\": 9673,\n              \"name\": \"string\",\n              \"address\": \"string\",\n              \"city\": \"string\"\n            }\n          }\n        }\n      ],\n      \"customer\": {\n        \"id\": 3966,\n        \"name\": \"string\",\n        \"email\": \"string\",\n        \"phoneNumber\": \"string\",\n        \"address\": \"string\",\n        \"registrationDate\": \"1975-06-26T04:16:03.851Z\"\n      }\n    }\n  },\n  {\n    \"id\": 9556,\n    \"amount\": 9462.589184741639,\n    \"method\": \"DEBIT_CARD\",\n    \"status\": \"APPROVED\",\n    \"paymentDate\": \"2025-08-20T12:45:05.642Z\",\n    \"order\": {\n      \"id\": 9171,\n      \"orderDate\": \"2024-05-31T11:07:34.165Z\",\n      \"total\": 3141.0489901187575,\n      \"status\": \"RECEIVED\",\n      \"channel\": \"TOTEM\",\n      \"items\": [\n        {\n          \"id\": 2036,\n          \"quantity\": 2294,\n          \"price\": 9423.806476808417,\n          \"product\": {\n            \"id\": 3275,\n            \"name\": \"string\",\n            \"description\": \"string\",\n            \"price\": 5323.131736290161,\n            \"active\": true,\n            \"category\": {\n              \"id\": 2945,\n              \"name\": \"string\",\n              \"description\": \"string\"\n            },\n            \"unit\": {\n              \"id\": 41,\n              \"name\": \"string\",\n              \"address\": \"string\",\n              \"city\": \"string\"\n            }\n          }\n        },\n        {\n          \"id\": 1527,\n          \"quantity\": 764,\n          \"price\": 9127.956267153813,\n          \"product\": {\n            \"id\": 2547,\n            \"name\": \"string\",\n            \"description\": \"string\",\n            \"price\": 2109.6289792073144,\n            \"active\": false,\n            \"category\": {\n              \"id\": 7607,\n              \"name\": \"string\",\n              \"description\": \"string\"\n            },\n            \"unit\": {\n              \"id\": 6285,\n              \"name\": \"string\",\n              \"address\": \"string\",\n              \"city\": \"string\"\n            }\n          }\n        }\n      ],\n      \"customer\": {\n        \"id\": 8501,\n        \"name\": \"string\",\n        \"email\": \"string\",\n        \"phoneNumber\": \"string\",\n        \"address\": \"string\",\n        \"registrationDate\": \"1977-05-01T14:49:58.241Z\"\n      }\n    }\n  }\n]"
+            }
+          ]
+        },
+        {
+          "name": "create Payment",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTc3NjE2NjMyMiwiZXhwIjoxNzc2MTY5OTIyfQ.TeKQlFgaPIH0htCMH8Pux8q6nYEwX86COLED_LBq3ZA",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "headerFamily": "json",
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/payments",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "payments"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "OK",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"id\": 2781,\n  \"amount\": 4405.775276593673,\n  \"method\": \"CASH\",\n  \"status\": \"APPROVED\",\n  \"paymentDate\": \"2015-09-22T16:28:03.728Z\",\n  \"order\": {\n    \"id\": 155,\n    \"orderDate\": \"1955-06-01T06:21:21.072Z\",\n    \"total\": 4147.878055742555,\n    \"status\": \"DELIVERED\",\n    \"channel\": \"BALCAO\",\n    \"items\": [\n      {\n        \"id\": 5340,\n        \"quantity\": 7986,\n        \"price\": 4290.072709133823,\n        \"product\": {\n          \"id\": 5884,\n          \"name\": \"string\",\n          \"description\": \"string\",\n          \"price\": 8163.225897535733,\n          \"active\": true,\n          \"category\": {\n            \"id\": 9878,\n            \"name\": \"string\",\n            \"description\": \"string\"\n          },\n          \"unit\": {\n            \"id\": 7803,\n            \"name\": \"string\",\n            \"address\": \"string\",\n            \"city\": \"string\"\n          }\n        }\n      },\n      {\n        \"id\": 5035,\n        \"quantity\": 6437,\n        \"price\": 1042.5329613357314,\n        \"product\": {\n          \"id\": 4073,\n          \"name\": \"string\",\n          \"description\": \"string\",\n          \"price\": 1221.9797692827794,\n          \"active\": true,\n          \"category\": {\n            \"id\": 142,\n            \"name\": \"string\",\n            \"description\": \"string\"\n          },\n          \"unit\": {\n            \"id\": 8874,\n            \"name\": \"string\",\n            \"address\": \"string\",\n            \"city\": \"string\"\n          }\n        }\n      }\n    ],\n    \"customer\": {\n      \"id\": 605,\n      \"name\": \"string\",\n      \"email\": \"string\",\n      \"phoneNumber\": \"string\",\n      \"address\": \"string\",\n      \"registrationDate\": \"2010-11-06T01:02:34.713Z\"\n    }\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/payments",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "payments"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "text",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n  \"id\": 2781,\n  \"amount\": 4405.775276593673,\n  \"method\": \"CASH\",\n  \"status\": \"APPROVED\",\n  \"paymentDate\": \"2015-09-22T16:28:03.728Z\",\n  \"order\": {\n    \"id\": 155,\n    \"orderDate\": \"1955-06-01T06:21:21.072Z\",\n    \"total\": 4147.878055742555,\n    \"status\": \"DELIVERED\",\n    \"channel\": \"BALCAO\",\n    \"items\": [\n      {\n        \"id\": 5340,\n        \"quantity\": 7986,\n        \"price\": 4290.072709133823,\n        \"product\": {\n          \"id\": 5884,\n          \"name\": \"string\",\n          \"description\": \"string\",\n          \"price\": 8163.225897535733,\n          \"active\": true,\n          \"category\": {\n            \"id\": 9878,\n            \"name\": \"string\",\n            \"description\": \"string\"\n          },\n          \"unit\": {\n            \"id\": 7803,\n            \"name\": \"string\",\n            \"address\": \"string\",\n            \"city\": \"string\"\n          }\n        }\n      },\n      {\n        \"id\": 5035,\n        \"quantity\": 6437,\n        \"price\": 1042.5329613357314,\n        \"product\": {\n          \"id\": 4073,\n          \"name\": \"string\",\n          \"description\": \"string\",\n          \"price\": 1221.9797692827794,\n          \"active\": true,\n          \"category\": {\n            \"id\": 142,\n            \"name\": \"string\",\n            \"description\": \"string\"\n          },\n          \"unit\": {\n            \"id\": 8874,\n            \"name\": \"string\",\n            \"address\": \"string\",\n            \"city\": \"string\"\n          }\n        }\n      }\n    ],\n    \"customer\": {\n      \"id\": 605,\n      \"name\": \"string\",\n      \"email\": \"string\",\n      \"phoneNumber\": \"string\",\n      \"address\": \"string\",\n      \"registrationDate\": \"2010-11-06T01:02:34.713Z\"\n    }\n  }\n}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "orders",
+      "item": [
+        {
+          "name": "{id}",
+          "item": [
+            {
+              "name": "status",
+              "item": [
+                {
+                  "name": "update Order Status",
+                  "request": {
+                    "method": "PATCH",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "*/*"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/orders/:id/status?status=DELIVERED",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "orders",
+                        ":id",
+                        "status"
+                      ],
+                      "query": [
+                        {
+                          "key": "status",
+                          "value": "DELIVERED"
+                        }
+                      ],
+                      "variable": [
+                        {
+                          "key": "id",
+                          "value": "8336"
+                        }
+                      ]
+                    }
+                  },
+                  "response": [
+                    {
+                      "name": "OK",
+                      "originalRequest": {
+                        "method": "PATCH",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "*/*"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/orders/:id/status?status=DELIVERED",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "orders",
+                            ":id",
+                            "status"
+                          ],
+                          "query": [
+                            {
+                              "key": "status",
+                              "value": "DELIVERED"
+                            }
+                          ],
+                          "variable": [
+                            {
+                              "key": "id",
+                              "value": "8336"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "text",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "*/*"
+                        }
+                      ],
+                      "cookie": [],
+                      "body": "{\n  \"id\": 9876,\n  \"orderDate\": \"1977-09-30T15:08:15.405Z\",\n  \"total\": 4782.012062746073,\n  \"status\": \"RECEIVED\",\n  \"channel\": \"BALCAO\",\n  \"items\": [\n    {\n      \"id\": 7774,\n      \"quantity\": 4854,\n      \"price\": 3259.882887816272,\n      \"product\": {\n        \"id\": 7718,\n        \"name\": \"string\",\n        \"description\": \"string\",\n        \"price\": 1587.8057101993259,\n        \"active\": false,\n        \"category\": {\n          \"id\": 5365,\n          \"name\": \"string\",\n          \"description\": \"string\"\n        },\n        \"unit\": {\n          \"id\": 920,\n          \"name\": \"string\",\n          \"address\": \"string\",\n          \"city\": \"string\"\n        }\n      }\n    },\n    {\n      \"id\": 9657,\n      \"quantity\": 408,\n      \"price\": 7596.618735524521,\n      \"product\": {\n        \"id\": 4429,\n        \"name\": \"string\",\n        \"description\": \"string\",\n        \"price\": 8989.477056904885,\n        \"active\": true,\n        \"category\": {\n          \"id\": 8240,\n          \"name\": \"string\",\n          \"description\": \"string\"\n        },\n        \"unit\": {\n          \"id\": 580,\n          \"name\": \"string\",\n          \"address\": \"string\",\n          \"city\": \"string\"\n        }\n      }\n    }\n  ],\n  \"customer\": {\n    \"id\": 7144,\n    \"name\": \"string\",\n    \"email\": \"string\",\n    \"phoneNumber\": \"string\",\n    \"address\": \"string\",\n    \"registrationDate\": \"2012-07-31T04:20:41.777Z\"\n  }\n}"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "get Order By Id",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/orders/:id",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "orders",
+                    ":id"
+                  ],
+                  "variable": [
+                    {
+                      "key": "id",
+                      "value": "8336"
+                    }
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "name": "OK",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "*/*"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/orders/:id",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "orders",
+                        ":id"
+                      ],
+                      "variable": [
+                        {
+                          "key": "id",
+                          "value": "8336"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "*/*"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "{\n  \"id\": 9876,\n  \"orderDate\": \"1977-09-30T15:08:15.405Z\",\n  \"total\": 4782.012062746073,\n  \"status\": \"RECEIVED\",\n  \"channel\": \"BALCAO\",\n  \"items\": [\n    {\n      \"id\": 7774,\n      \"quantity\": 4854,\n      \"price\": 3259.882887816272,\n      \"product\": {\n        \"id\": 7718,\n        \"name\": \"string\",\n        \"description\": \"string\",\n        \"price\": 1587.8057101993259,\n        \"active\": false,\n        \"category\": {\n          \"id\": 5365,\n          \"name\": \"string\",\n          \"description\": \"string\"\n        },\n        \"unit\": {\n          \"id\": 920,\n          \"name\": \"string\",\n          \"address\": \"string\",\n          \"city\": \"string\"\n        }\n      }\n    },\n    {\n      \"id\": 9657,\n      \"quantity\": 408,\n      \"price\": 7596.618735524521,\n      \"product\": {\n        \"id\": 4429,\n        \"name\": \"string\",\n        \"description\": \"string\",\n        \"price\": 8989.477056904885,\n        \"active\": true,\n        \"category\": {\n          \"id\": 8240,\n          \"name\": \"string\",\n          \"description\": \"string\"\n        },\n        \"unit\": {\n          \"id\": 580,\n          \"name\": \"string\",\n          \"address\": \"string\",\n          \"city\": \"string\"\n        }\n      }\n    }\n  ],\n  \"customer\": {\n    \"id\": 7144,\n    \"name\": \"string\",\n    \"email\": \"string\",\n    \"phoneNumber\": \"string\",\n    \"address\": \"string\",\n    \"registrationDate\": \"2012-07-31T04:20:41.777Z\"\n  }\n}"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "status",
+          "item": [
+            {
+              "name": "{status}",
+              "item": [
+                {
+                  "name": "get Order By Status",
+                  "request": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "*/*"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/orders/status/:status",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "orders",
+                        "status",
+                        ":status"
+                      ],
+                      "variable": [
+                        {
+                          "key": "status",
+                          "value": "DELIVERED"
+                        }
+                      ]
+                    }
+                  },
+                  "response": [
+                    {
+                      "name": "OK",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "*/*"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/orders/status/:status",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "orders",
+                            "status",
+                            ":status"
+                          ],
+                          "variable": [
+                            {
+                              "key": "status",
+                              "value": "DELIVERED"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "text",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "*/*"
+                        }
+                      ],
+                      "cookie": [],
+                      "body": "[\n  {\n    \"id\": 1985,\n    \"orderDate\": \"1969-08-01T18:05:02.143Z\",\n    \"total\": 3525.6201021791835,\n    \"status\": \"DELIVERED\",\n    \"channel\": \"TOTEM\",\n    \"items\": [\n      {\n        \"id\": 2255,\n        \"quantity\": 6378,\n        \"price\": 5846.859298865898,\n        \"product\": {\n          \"id\": 2328,\n          \"name\": \"string\",\n          \"description\": \"string\",\n          \"price\": 9059.970750290804,\n          \"active\": true,\n          \"category\": {\n            \"id\": 772,\n            \"name\": \"string\",\n            \"description\": \"string\"\n          },\n          \"unit\": {\n            \"id\": 8922,\n            \"name\": \"string\",\n            \"address\": \"string\",\n            \"city\": \"string\"\n          }\n        }\n      },\n      {\n        \"id\": 7620,\n        \"quantity\": 570,\n        \"price\": 568.6674234859845,\n        \"product\": {\n          \"id\": 8630,\n          \"name\": \"string\",\n          \"description\": \"string\",\n          \"price\": 6447.363986794859,\n          \"active\": true,\n          \"category\": {\n            \"id\": 6130,\n            \"name\": \"string\",\n            \"description\": \"string\"\n          },\n          \"unit\": {\n            \"id\": 655,\n            \"name\": \"string\",\n            \"address\": \"string\",\n            \"city\": \"string\"\n          }\n        }\n      }\n    ],\n    \"customer\": {\n      \"id\": 3754,\n      \"name\": \"string\",\n      \"email\": \"string\",\n      \"phoneNumber\": \"string\",\n      \"address\": \"string\",\n      \"registrationDate\": \"1971-09-06T04:03:04.301Z\"\n    }\n  },\n  {\n    \"id\": 3472,\n    \"orderDate\": \"1985-04-23T03:05:07.344Z\",\n    \"total\": 4675.059181950434,\n    \"status\": \"DELIVERED\",\n    \"channel\": \"APP\",\n    \"items\": [\n      {\n        \"id\": 7482,\n        \"quantity\": 4261,\n        \"price\": 5014.785892061155,\n        \"product\": {\n          \"id\": 3473,\n          \"name\": \"string\",\n          \"description\": \"string\",\n          \"price\": 9477.541331557786,\n          \"active\": true,\n          \"category\": {\n            \"id\": 7974,\n            \"name\": \"string\",\n            \"description\": \"string\"\n          },\n          \"unit\": {\n            \"id\": 752,\n            \"name\": \"string\",\n            \"address\": \"string\",\n            \"city\": \"string\"\n          }\n        }\n      },\n      {\n        \"id\": 2274,\n        \"quantity\": 7488,\n        \"price\": 4263.0528091567485,\n        \"product\": {\n          \"id\": 7982,\n          \"name\": \"string\",\n          \"description\": \"string\",\n          \"price\": 9330.287964997937,\n          \"active\": true,\n          \"category\": {\n            \"id\": 8306,\n            \"name\": \"string\",\n            \"description\": \"string\"\n          },\n          \"unit\": {\n            \"id\": 8794,\n            \"name\": \"string\",\n            \"address\": \"string\",\n            \"city\": \"string\"\n          }\n        }\n      }\n    ],\n    \"customer\": {\n      \"id\": 4269,\n      \"name\": \"string\",\n      \"email\": \"string\",\n      \"phoneNumber\": \"string\",\n      \"address\": \"string\",\n      \"registrationDate\": \"2021-04-06T10:00:20.727Z\"\n    }\n  }\n]"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Get All Orders",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/orders",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "orders"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "OK",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/orders",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "orders"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "text",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "cookie": [],
+              "body": "[\n  {\n    \"id\": 1985,\n    \"orderDate\": \"1969-08-01T18:05:02.143Z\",\n    \"total\": 3525.6201021791835,\n    \"status\": \"DELIVERED\",\n    \"channel\": \"TOTEM\",\n    \"items\": [\n      {\n        \"id\": 2255,\n        \"quantity\": 6378,\n        \"price\": 5846.859298865898,\n        \"product\": {\n          \"id\": 2328,\n          \"name\": \"string\",\n          \"description\": \"string\",\n          \"price\": 9059.970750290804,\n          \"active\": true,\n          \"category\": {\n            \"id\": 772,\n            \"name\": \"string\",\n            \"description\": \"string\"\n          },\n          \"unit\": {\n            \"id\": 8922,\n            \"name\": \"string\",\n            \"address\": \"string\",\n            \"city\": \"string\"\n          }\n        }\n      },\n      {\n        \"id\": 7620,\n        \"quantity\": 570,\n        \"price\": 568.6674234859845,\n        \"product\": {\n          \"id\": 8630,\n          \"name\": \"string\",\n          \"description\": \"string\",\n          \"price\": 6447.363986794859,\n          \"active\": true,\n          \"category\": {\n            \"id\": 6130,\n            \"name\": \"string\",\n            \"description\": \"string\"\n          },\n          \"unit\": {\n            \"id\": 655,\n            \"name\": \"string\",\n            \"address\": \"string\",\n            \"city\": \"string\"\n          }\n        }\n      }\n    ],\n    \"customer\": {\n      \"id\": 3754,\n      \"name\": \"string\",\n      \"email\": \"string\",\n      \"phoneNumber\": \"string\",\n      \"address\": \"string\",\n      \"registrationDate\": \"1971-09-06T04:03:04.301Z\"\n    }\n  },\n  {\n    \"id\": 3472,\n    \"orderDate\": \"1985-04-23T03:05:07.344Z\",\n    \"total\": 4675.059181950434,\n    \"status\": \"DELIVERED\",\n    \"channel\": \"APP\",\n    \"items\": [\n      {\n        \"id\": 7482,\n        \"quantity\": 4261,\n        \"price\": 5014.785892061155,\n        \"product\": {\n          \"id\": 3473,\n          \"name\": \"string\",\n          \"description\": \"string\",\n          \"price\": 9477.541331557786,\n          \"active\": true,\n          \"category\": {\n            \"id\": 7974,\n            \"name\": \"string\",\n            \"description\": \"string\"\n          },\n          \"unit\": {\n            \"id\": 752,\n            \"name\": \"string\",\n            \"address\": \"string\",\n            \"city\": \"string\"\n          }\n        }\n      },\n      {\n        \"id\": 2274,\n        \"quantity\": 7488,\n        \"price\": 4263.0528091567485,\n        \"product\": {\n          \"id\": 7982,\n          \"name\": \"string\",\n          \"description\": \"string\",\n          \"price\": 9330.287964997937,\n          \"active\": true,\n          \"category\": {\n            \"id\": 8306,\n            \"name\": \"string\",\n            \"description\": \"string\"\n          },\n          \"unit\": {\n            \"id\": 8794,\n            \"name\": \"string\",\n            \"address\": \"string\",\n            \"city\": \"string\"\n          }\n        }\n      }\n    ],\n    \"customer\": {\n      \"id\": 4269,\n      \"name\": \"string\",\n      \"email\": \"string\",\n      \"phoneNumber\": \"string\",\n      \"address\": \"string\",\n      \"registrationDate\": \"2021-04-06T10:00:20.727Z\"\n    }\n  }\n]"
+            }
+          ]
+        },
+        {
+          "name": "Create Order",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTc3NjE2NjMyMiwiZXhwIjoxNzc2MTY5OTIyfQ.TeKQlFgaPIH0htCMH8Pux8q6nYEwX86COLED_LBq3ZA",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"channel\": \"APP\",\n  \"customerId\": 2,\n  \"items\": [\n    {\n      \"productId\": 2,\n      \"quantity\": 1\n    },\n    {\n      \"productId\": 3,\n      \"quantity\": 1\n    }\n  ]\n}",
+              "options": {
+                "raw": {
+                  "headerFamily": "json",
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/orders",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "orders"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "OK",
+              "originalRequest": {
+                "method": "PATCH",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"channel\": \"TOTEM\",\n  \"customerId\": 933,\n  \"items\": [\n    {\n      \"productId\": 795,\n      \"quantity\": 7551\n    },\n    {\n      \"productId\": 3200,\n      \"quantity\": 5450\n    }\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/orders/1/status?status=PREPARING",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "orders",
+                    "1",
+                    "status"
+                  ],
+                  "query": [
+                    {
+                      "key": "status",
+                      "value": "PREPARING"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "text",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n  \"id\": 51,\n  \"status\": \"string\",\n  \"total\": 9533.747025845558\n}"
+            }
+          ]
+        },
+        {
+          "name": "Patch Order PREPARATION",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTc3NjE2NjMyMiwiZXhwIjoxNzc2MTY5OTIyfQ.TeKQlFgaPIH0htCMH8Pux8q6nYEwX86COLED_LBq3ZA",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"channel\": \"TOTEM\",\n  \"customerId\": 933,\n  \"items\": [\n    {\n      \"productId\": 795,\n      \"quantity\": 7551\n    },\n    {\n      \"productId\": 3200,\n      \"quantity\": 5450\n    }\n  ]\n}",
+              "options": {
+                "raw": {
+                  "headerFamily": "json",
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/orders/1/status?status=PREPARATION",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "orders",
+                "1",
+                "status"
+              ],
+              "query": [
+                {
+                  "key": "status",
+                  "value": "PREPARATION"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Patch Order READY",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTc3NjE2NjMyMiwiZXhwIjoxNzc2MTY5OTIyfQ.TeKQlFgaPIH0htCMH8Pux8q6nYEwX86COLED_LBq3ZA",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"channel\": \"TOTEM\",\n  \"customerId\": 933,\n  \"items\": [\n    {\n      \"productId\": 795,\n      \"quantity\": 7551\n    },\n    {\n      \"productId\": 3200,\n      \"quantity\": 5450\n    }\n  ]\n}",
+              "options": {
+                "raw": {
+                  "headerFamily": "json",
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/orders/1/status?status=READY",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "orders",
+                "1",
+                "status"
+              ],
+              "query": [
+                {
+                  "key": "status",
+                  "value": "READY"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Patch Order DELIVERED",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTc3NjE2NjMyMiwiZXhwIjoxNzc2MTY5OTIyfQ.TeKQlFgaPIH0htCMH8Pux8q6nYEwX86COLED_LBq3ZA",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"channel\": \"TOTEM\",\n  \"customerId\": 933,\n  \"items\": [\n    {\n      \"productId\": 795,\n      \"quantity\": 7551\n    },\n    {\n      \"productId\": 3200,\n      \"quantity\": 5450\n    }\n  ]\n}",
+              "options": {
+                "raw": {
+                  "headerFamily": "json",
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/orders/1/status?status=DELIVERED",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "orders",
+                "1",
+                "status"
+              ],
+              "query": [
+                {
+                  "key": "status",
+                  "value": "DELIVERED"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "auth",
+      "item": [
+        {
+          "name": "login",
+          "item": [
+            {
+              "name": "Login",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"username\": \"admin\",\n  \"password\": \"123456\"\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/auth/login",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "auth",
+                    "login"
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "name": "OK",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "*/*"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n  \"key_0\": \"string\",\n  \"key_1\": \"string\",\n  \"key_2\": \"string\"\n}",
+                      "options": {
+                        "raw": {
+                          "headerFamily": "json",
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/auth/login",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "auth",
+                        "login"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "*/*"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "{\n  \"key_0\": \"string\",\n  \"key_1\": \"string\",\n  \"key_2\": \"string\"\n}"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Error Tests",
+      "item": [
+        {
+          "name": "Error Get Order",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTc3NjMwMjYwNSwiZXhwIjoxNzc2MzA2MjA1fQ.hc2Bv8Gynp8VFCmMN46vKZQk25lxQM3ioAY3rYLhesg",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/orders/999",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "orders",
+                "999"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Error Post Order",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTc3NjMwMjYwNSwiZXhwIjoxNzc2MzA2MjA1fQ.hc2Bv8Gynp8VFCmMN46vKZQk25lxQM3ioAY3rYLhesg",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"channel\": \"APP\",\r\n  \"customerId\": 2,\r\n  \"items\": [\r\n    {\r\n      \"productId\": 1,\r\n      \"quantity\": 1\r\n    },\r\n    {\r\n      \"productId\": 3,\r\n      \"quantity\": 1\r\n    }\r\n  ]\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/orders",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "orders"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Error Post Customer",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTc3NjMwMjYwNSwiZXhwIjoxNzc2MzA2MjA1fQ.hc2Bv8Gynp8VFCmMN46vKZQk25lxQM3ioAY3rYLhesg",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"name\": \"João da Silva\",\r\n  \"email\": \"joao@email.com\",\r\n  \"phoneNumber\": \"(81)99999-8888\",\r\n  \"address\": \"Rua da Conquista, 10\",\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/customers",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "customers"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Main Flow",
+      "item": [
+        {
+          "name": "1 - POST Login",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"username\": \"admin\",\n  \"password\": \"123456\"\n}",
+              "options": {
+                "raw": {
+                  "headerFamily": "json",
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/auth/login",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "auth",
+                "login"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "OK",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"key_0\": \"string\",\n  \"key_1\": \"string\",\n  \"key_2\": \"string\"\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/auth/login",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "auth",
+                    "login"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "text",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n  \"key_0\": \"string\",\n  \"key_1\": \"string\",\n  \"key_2\": \"string\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "2 - POST Create Customer",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTc3NjE2NjMyMiwiZXhwIjoxNzc2MTY5OTIyfQ.TeKQlFgaPIH0htCMH8Pux8q6nYEwX86COLED_LBq3ZA",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Maria Lima\",\n  \"email\": \"maria@email.com\",\n  \"phoneNumber\": \"(81)95555-6666\",\n  \"address\": \"Rua da Vitória, 50\"\n}",
+              "options": {
+                "raw": {
+                  "headerFamily": "json",
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/customers",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "customers"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "OK",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"id\": 134,\n  \"name\": \"string\",\n  \"email\": \"string\",\n  \"phoneNumber\": \"string\",\n  \"address\": \"string\",\n  \"registrationDate\": \"1990-06-09T22:01:17.283Z\"\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/customers",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "customers"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "text",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n  \"id\": 134,\n  \"name\": \"string\",\n  \"email\": \"string\",\n  \"phoneNumber\": \"string\",\n  \"address\": \"string\",\n  \"registrationDate\": \"1990-06-09T22:01:17.283Z\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "3 - POST Create Product",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTc3NjA5NDA3OSwiZXhwIjoxNzc2MDk3Njc5fQ.wzlSD1L7c-2IsI0JbrvGPQ5No4ATMLR0UGYeMtFd3mY",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Cuscuz\",\n  \"description\": \"Cuscuz nordestino.\",\n  \"price\": 20.00,\n  \"active\": true,\n  \"categoryId\": 2,\n  \"unitId\": 1\n\n}",
+              "options": {
+                "raw": {
+                  "headerFamily": "json",
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/products",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "products"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "OK",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"id\": 8758,\n  \"name\": \"string\",\n  \"description\": \"string\",\n  \"price\": 6364.399051052199,\n  \"active\": false,\n  \"category\": {\n    \"id\": 9368,\n    \"name\": \"string\",\n    \"description\": \"string\"\n  },\n  \"unit\": {\n    \"id\": 8158,\n    \"name\": \"string\",\n    \"address\": \"string\",\n    \"city\": \"string\"\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/products",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "products"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "text",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n  \"id\": 8758,\n  \"name\": \"string\",\n  \"description\": \"string\",\n  \"price\": 6364.399051052199,\n  \"active\": false,\n  \"category\": {\n    \"id\": 9368,\n    \"name\": \"string\",\n    \"description\": \"string\"\n  },\n  \"unit\": {\n    \"id\": 8158,\n    \"name\": \"string\",\n    \"address\": \"string\",\n    \"city\": \"string\"\n  }\n}"
+            }
+          ]
+        },
+        {
+          "name": "4 - POST Create Order",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTc3NjE2NjMyMiwiZXhwIjoxNzc2MTY5OTIyfQ.TeKQlFgaPIH0htCMH8Pux8q6nYEwX86COLED_LBq3ZA",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"channel\": \"APP\",\n  \"customerId\": 2,\n  \"items\": [\n    {\n      \"productId\": 2,\n      \"quantity\": 1\n    },\n    {\n      \"productId\": 3,\n      \"quantity\": 1\n    }\n  ]\n}",
+              "options": {
+                "raw": {
+                  "headerFamily": "json",
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/orders",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "orders"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "OK",
+              "originalRequest": {
+                "method": "PATCH",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"channel\": \"TOTEM\",\n  \"customerId\": 933,\n  \"items\": [\n    {\n      \"productId\": 795,\n      \"quantity\": 7551\n    },\n    {\n      \"productId\": 3200,\n      \"quantity\": 5450\n    }\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/orders/1/status?status=PREPARING",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "orders",
+                    "1",
+                    "status"
+                  ],
+                  "query": [
+                    {
+                      "key": "status",
+                      "value": "PREPARING"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "text",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n  \"id\": 51,\n  \"status\": \"string\",\n  \"total\": 9533.747025845558\n}"
+            }
+          ]
+        },
+        {
+          "name": "5 - POST Create Payment",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTc3NjE2NjMyMiwiZXhwIjoxNzc2MTY5OTIyfQ.TeKQlFgaPIH0htCMH8Pux8q6nYEwX86COLED_LBq3ZA",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "headerFamily": "json",
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/payments",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "payments"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "OK",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"id\": 2781,\n  \"amount\": 4405.775276593673,\n  \"method\": \"CASH\",\n  \"status\": \"APPROVED\",\n  \"paymentDate\": \"2015-09-22T16:28:03.728Z\",\n  \"order\": {\n    \"id\": 155,\n    \"orderDate\": \"1955-06-01T06:21:21.072Z\",\n    \"total\": 4147.878055742555,\n    \"status\": \"DELIVERED\",\n    \"channel\": \"BALCAO\",\n    \"items\": [\n      {\n        \"id\": 5340,\n        \"quantity\": 7986,\n        \"price\": 4290.072709133823,\n        \"product\": {\n          \"id\": 5884,\n          \"name\": \"string\",\n          \"description\": \"string\",\n          \"price\": 8163.225897535733,\n          \"active\": true,\n          \"category\": {\n            \"id\": 9878,\n            \"name\": \"string\",\n            \"description\": \"string\"\n          },\n          \"unit\": {\n            \"id\": 7803,\n            \"name\": \"string\",\n            \"address\": \"string\",\n            \"city\": \"string\"\n          }\n        }\n      },\n      {\n        \"id\": 5035,\n        \"quantity\": 6437,\n        \"price\": 1042.5329613357314,\n        \"product\": {\n          \"id\": 4073,\n          \"name\": \"string\",\n          \"description\": \"string\",\n          \"price\": 1221.9797692827794,\n          \"active\": true,\n          \"category\": {\n            \"id\": 142,\n            \"name\": \"string\",\n            \"description\": \"string\"\n          },\n          \"unit\": {\n            \"id\": 8874,\n            \"name\": \"string\",\n            \"address\": \"string\",\n            \"city\": \"string\"\n          }\n        }\n      }\n    ],\n    \"customer\": {\n      \"id\": 605,\n      \"name\": \"string\",\n      \"email\": \"string\",\n      \"phoneNumber\": \"string\",\n      \"address\": \"string\",\n      \"registrationDate\": \"2010-11-06T01:02:34.713Z\"\n    }\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/payments",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "payments"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "text",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n  \"id\": 2781,\n  \"amount\": 4405.775276593673,\n  \"method\": \"CASH\",\n  \"status\": \"APPROVED\",\n  \"paymentDate\": \"2015-09-22T16:28:03.728Z\",\n  \"order\": {\n    \"id\": 155,\n    \"orderDate\": \"1955-06-01T06:21:21.072Z\",\n    \"total\": 4147.878055742555,\n    \"status\": \"DELIVERED\",\n    \"channel\": \"BALCAO\",\n    \"items\": [\n      {\n        \"id\": 5340,\n        \"quantity\": 7986,\n        \"price\": 4290.072709133823,\n        \"product\": {\n          \"id\": 5884,\n          \"name\": \"string\",\n          \"description\": \"string\",\n          \"price\": 8163.225897535733,\n          \"active\": true,\n          \"category\": {\n            \"id\": 9878,\n            \"name\": \"string\",\n            \"description\": \"string\"\n          },\n          \"unit\": {\n            \"id\": 7803,\n            \"name\": \"string\",\n            \"address\": \"string\",\n            \"city\": \"string\"\n          }\n        }\n      },\n      {\n        \"id\": 5035,\n        \"quantity\": 6437,\n        \"price\": 1042.5329613357314,\n        \"product\": {\n          \"id\": 4073,\n          \"name\": \"string\",\n          \"description\": \"string\",\n          \"price\": 1221.9797692827794,\n          \"active\": true,\n          \"category\": {\n            \"id\": 142,\n            \"name\": \"string\",\n            \"description\": \"string\"\n          },\n          \"unit\": {\n            \"id\": 8874,\n            \"name\": \"string\",\n            \"address\": \"string\",\n            \"city\": \"string\"\n          }\n        }\n      }\n    ],\n    \"customer\": {\n      \"id\": 605,\n      \"name\": \"string\",\n      \"email\": \"string\",\n      \"phoneNumber\": \"string\",\n      \"address\": \"string\",\n      \"registrationDate\": \"2010-11-06T01:02:34.713Z\"\n    }\n  }\n}"
+            }
+          ]
+        },
+        {
+          "name": "6 - PATCH Order PREPARATION",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTc3NjE2NjMyMiwiZXhwIjoxNzc2MTY5OTIyfQ.TeKQlFgaPIH0htCMH8Pux8q6nYEwX86COLED_LBq3ZA",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"channel\": \"TOTEM\",\n  \"customerId\": 933,\n  \"items\": [\n    {\n      \"productId\": 795,\n      \"quantity\": 7551\n    },\n    {\n      \"productId\": 3200,\n      \"quantity\": 5450\n    }\n  ]\n}",
+              "options": {
+                "raw": {
+                  "headerFamily": "json",
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/orders/1/status?status=PREPARATION",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "orders",
+                "1",
+                "status"
+              ],
+              "query": [
+                {
+                  "key": "status",
+                  "value": "PREPARATION"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "7 - PATCH Order READY",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTc3NjE2NjMyMiwiZXhwIjoxNzc2MTY5OTIyfQ.TeKQlFgaPIH0htCMH8Pux8q6nYEwX86COLED_LBq3ZA",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"channel\": \"TOTEM\",\n  \"customerId\": 933,\n  \"items\": [\n    {\n      \"productId\": 795,\n      \"quantity\": 7551\n    },\n    {\n      \"productId\": 3200,\n      \"quantity\": 5450\n    }\n  ]\n}",
+              "options": {
+                "raw": {
+                  "headerFamily": "json",
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/orders/1/status?status=READY",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "orders",
+                "1",
+                "status"
+              ],
+              "query": [
+                {
+                  "key": "status",
+                  "value": "READY"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "8 - PATCH Order DELIVERED",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTc3NjE2NjMyMiwiZXhwIjoxNzc2MTY5OTIyfQ.TeKQlFgaPIH0htCMH8Pux8q6nYEwX86COLED_LBq3ZA",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"channel\": \"TOTEM\",\n  \"customerId\": 933,\n  \"items\": [\n    {\n      \"productId\": 795,\n      \"quantity\": 7551\n    },\n    {\n      \"productId\": 3200,\n      \"quantity\": 5450\n    }\n  ]\n}",
+              "options": {
+                "raw": {
+                  "headerFamily": "json",
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/orders/1/status?status=DELIVERED",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "orders",
+                "1",
+                "status"
+              ],
+              "query": [
+                {
+                  "key": "status",
+                  "value": "DELIVERED"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:8080"
+    }
+  ]
+}
